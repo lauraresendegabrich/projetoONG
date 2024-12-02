@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONG SOLIDARIEDADE</title>
+    <link rel="stylesheet" href="paginainicial.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="imagem/estrela.jpg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- FullCalendar CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
+    <!-- FullCalendar JS -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+     <!-- Link para o jQuery -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="img-logo">
+            <a href="paginainicial.html"><img src="logos/logopaginaprincipal3.png" alt="logotipo" class="logotipo"></a>
+        </div>
+        <input type="checkbox" id="nav_check" hidden>
+        <nav>
+            <div class="logo">
+                <div class="logo2">
+                </div>
+            </div>
+            <ul>
+                <li><a class="a-nav" href="paginainicial.html">INÍCIO</a></li>
+                <li><a class="a-nav" href="#quem-pode">SOBRE NÓS</a></li>
+                <li><a class="a-nav" href="#quem-somos">COMO AJUDAR?</a></li>
+                <li><a class="a-nav" href="#workshops-container">EVENTOS</a></li>
+                <li><a class="a-nav" href="#parceiros">PARCEIROS</a></li>
+                
+                <!-- Botões de Login e Cadastro -->
+                <li id="auth-buttons">
+                    <button id="entrar"><a href="loginUsuario.html">login</a></button>
+                    <button id="cadastro"><a href="cadastro.html">cadastrar</a></button>
+                </li>
+            
+                <!-- Botão de Perfil, inicialmente oculto -->
+                <li id="profile-button" style="display: none;">
+                    <button id="perfil">
+                        <a href="perfil.html">
+                            <img src="imagem/perfilbranco.png" alt="Ícone de Perfil" class="profile-icon"> perfil
+                        </a>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+        <label for="nav_check" class="hamburguer">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
+    <main>
+        <div class="banner">
+            <section class="banner_text">
+                <h1>Todos Juntos, Sempre!</h1>
+                <p>A sua solidariedade pode transformar vidas!  Sua contribuição, seja como voluntário, doador ou parceiro, pode fazer uma diferença significativa na comunidade.
+                </p>
+                <button><a href="#quem-somos">SAIBA MAIS</a></button>
+            </section>
+        </div>
+
+        <section class="donate_container">
+            <section class="donate">
+                <h1 id="tittle">Calendário de Eventos</h1>
+                
+                <div id="calendar"></div>
+                <!-- Modal para exibir as informações do evento -->
+<div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="eventModalLabel">Detalhes do Evento</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p id="eventTitle"></p>
+          <p><strong>Data: </strong><span id="eventDate"></span></p>
+          <p><strong>Descrição: </strong><span id="eventDescription"></span></p>
+          <p><strong>Local: </strong><span id="eventLocation"></span></p>
+          <p><strong>Responsável: </strong><span id="eventResponsible"></span></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+            </section>
+        </section>
+       
+        <section class="need_donate">
+            <div class="top">
+                <p>Eventos</p>
+                <button class="NeedShow" onclick="togglePeople()">Visualizar todos</button>
+            </div>
+            <section class="need">
+                <div id="workshops-container" class="workshops-container">
+                    <!-- Os cards serão gerados dinamicamente aqui -->
+                       
+                </div>
+                    
+            </section>
+        </section>
+        <section id="quem-pode">
+            <img src="imagem/casaOngsomos.png" class="doando" alt="">
+            <div class="quem-pode-flex">
+                <h1>Quem <br><strong>somos?</strong></h1>
+                <p>Nossa sede está situada em um bairro majoritariamente composto por trabalhadores assalariados de baixa renda, o que torna nossas atividades essenciais para a comunidade local. Acreditamos na construção de uma sociedade organizada e inclusiva. Operamos de forma independente, sem recursos do poder público, sem vínculos partidários e com caráter laico. Atualmente, contamos com o apoio de mais de 55 voluntários dedicados, oferecendo à população mais de 15 cursos nas áreas de recreação, qualificação profissional e idiomas.</p>
+            </div>
+        </section>
+        <section id="premio">
+            <div class="premio-flex">
+                <h1>Premiações</h1>
+                <p>Rosa Werneck, presidente da ONG Solidariedade Todos Juntos Sempre, foi premiada com o Prêmio de Serviço Comunitário Excepcional de 2024 pelo Conselho Nacional Hispano de Envelhecimento (NHCOA). A cerimônia de premiação ocorreu no dia 12 de novembro de 2024, no University Club em Washington DC, às 18h. Esse reconhecimento é uma celebração ao trabalho incansável de Rosa em prol da comunidade e ao seu compromisso com o bem-estar dos mais vulneráveis.</p>
+            </div>
+            <img src="imagem/fotoPresidente3certo1.png" class="doando2" alt="">
+        </section>
+        <section id="quem-somos">
+            <div>
+             <h1>Como <strong>ajudar?</strong></h1>
+            <p>✨ Seja Voluntário: Contribua com seu tempo e talento, participando das nossas atividades e oficinas. <br>
+                💸 Doe Recursos: Sua doação financeira nos ajuda a manter e ampliar nossos projetos. Qualquer valor faz a diferença! <br>
+                📦 Doe Alimentos e Roupas: Ajude em nossas campanhas de arrecadação de alimentos e roupas para as famílias que mais precisam.</p>   
+            </div>
+            
+        </section>
+
+        <section id="nossas-acoes">
+            <h1>Nossas <strong>ações</strong></h1>
+           <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7" aria-label="Slide 8"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8" aria-label="Slide 9"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="9" aria-label="Slide 10"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="imagem/acao1jpg.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Doações para zona Rural de Santa luzia</h5>
+                  <p>A ONG distribui brinquedos e alimentos para famílias da zona rural de Santa Luzia, levando alegria e apoio às comunidades locais.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="imagem/carroOng.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Conquista de Carro para a ONG</h5>
+                  <p>A ONG adquiriu um carro que ajudará no transporte de doações e na realização de ações em comunidades mais distantes.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="imagem/oficinadeDoces.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Oficina de Doces</h5>
+                  <p>Aula prática de doces e sobremesas.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="imagem/Tardesocial.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Tarde social com Bingo</h5>
+                  <p>Um momento de descontração e socialização para a comunidade, com jogos de bingo e prêmios especiais.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="imagem/aulaAlfabetizacao.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Alfabetização</h5>
+                  <p>Aulas de alfabetização para jovens e adultos, promovendo o aprendizado da leitura e escrita para a inclusão social.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="imagem/Voluntarios.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Voluntários</h5>
+                  <p>Colaboradores e voluntários dedicados, unidos para fazer a diferença em projetos sociais e comunitários.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="imagem/doações.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Cestas para doação</h5>
+                  <p>Cestas de alimentos e itens essenciais preparados para serem distribuídos a famílias em situação de vulnerabilidade.</p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="imagem/cestas.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Material para doação</h5>
+                  <p>Roupas, brinquedos e itens de necessidade básica disponíveis para doação, contribuindo para o bem-estar da comunidade.</p>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+            
+            
+        </section>
+
+        <section id="parceiros">
+           
+             <h1>Parceiros</strong></h1>
+             <div id="carouselParceiros" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row text-center">
+                            <div class="col">
+                                <img src="imagem/grafica.png" alt="Parceiro 1" class="partner-image">
+                            </div>
+                            <div class="col">
+                                <img src="imagem/maisCar.png" alt="Parceiro 2" class="partner-image">
+                            </div>
+                            <div class="col">
+                                <img src="imagem/cruzvermelha.webp" alt="Parceiro 3" class="partner-image"> 
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row text-center">
+                            <div class="col">
+                                <img src="imagem/cacaushow.png" alt="Parceiro 4" class="partner-image">
+                            </div>
+                            <div class="col">
+                                <img src="imagem/itatiaia2.png" alt="Parceiro 5" class="partner-image">
+                            </div>
+                            <div class="col">
+                                <img src="imagem/rogerioFranca3.png" alt="Parceiro 6" class="partner-image"> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row text-center">
+                            <div class="col">
+                                <img src="imagem/abrasel.png" alt="Parceiro 4" class="partner-image">
+                            </div>
+                            <div class="col">
+                                <img src="imagem/fisioterapia.png" alt="Parceiro 5" class="partner-image">
+                            </div>
+                            <div class="col">
+                                <img src="imagem/uauIngleza1.png" alt="Parceiro 6" class="partner-image"> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row text-center">
+                            <div class="col">
+                                <img src="imagem/quartzolit2.png" alt="Parceiro 4" class="partner-image">
+                            </div>
+                            <div class="col">
+                                <img src="imagem/grandminas2.png" alt="Parceiro 5" class="partner-image">
+                            </div>
+                            <div class="col">
+                                <img src="imagem/mesaBrasil.png" alt="Parceiro 6" class="partner-image"> 
+                            </div>
+                            <div class="col">
+                                <img src="imagem/vivo-logo-0.png" alt="Parceiro 6" class="partner-image"> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselParceiros" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselParceiros" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+            
+        </section>
+
+        <section class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3754.6118704108126!2d-43.85225562477679!3d-19.77163828158147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6815d92863301%3A0x303bf939528f2efb!2sONG%20Solidariedade!5e0!3m2!1spt-BR!2sbr!4v1730490973240!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+        </section>
+
+    </main>
+    <footer>
+        <img id="logo" src="imagem/estrelaBranca.png">
+        <ul id="info_rodape">
+            <li>Telefone :(31) 3641-6713</li>
+            <li>Desenvolvido pela turma de Sistemas de Informação - Puc Minas (3°período)</li>
+            <li>© 2024 ONG Solidariedade Todos Juntos Sempre. Todos os direitos reservados.</li>
+            
+        </ul>
+        <section id="redes_sociais">
+            <a href="https://wa.me/5531996248942?text=" target="_blank" id="whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/ongsolidariedadetjsempre/" target="_blank" id="instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="mailto:ong.solidariedadesantaluzia@gmail.com" target="_blank" id="email">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="https://www.facebook.com/p/ONG-Solidariedade-todos-juntos-sempre-100069971057165/?locale=pt_BR" target="_blank" id="facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+        </section>
+        <div id="endereco_rodape">
+            Rua Nossa Senhora Aparecida, 88 - Bairro Idulipê <br> Santa Luzia - MG,  33025-260 
+        </div>
+    </footer>
+
+</body>
+
+<script src="paginainicial.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+
+
+</html>
