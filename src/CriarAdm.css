@@ -1,0 +1,210 @@
+/* #region Criar Evento Form */
+.create-events-section {
+    background-color: #ffffff;
+    width: 100%;
+    overflow-y: auto;
+    /* Para permitir rolagem caso o conteúdo ultrapasse a altura da tela */
+    padding: 2%;
+    box-shadow: 0 0 10px 2px #33BBED;
+}
+
+.event-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#create-form {
+    all: unset;
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    font-size: 30px;
+}
+
+/* Estilo do título */
+#create-form h2#modal-title {
+    font-size: 40px;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+/* Estilo dos rótulos */
+
+
+/* Estilo dos inputs */
+#create-form input[type="text"],
+#create-form input[type="date"],
+#create-form input[type="time"],
+#create-form input[type="number"],
+#create-form textarea,
+#create-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    color: #333333;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+    font-size: 30px;
+    background-color: #92b81e13;
+}
+
+/* Efeito hover e focus nos inputs */
+#create-form input:focus,
+#create-form textarea:focus,
+#create-form select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Estilo para textarea */
+#create-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Estilo do botão */
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.modal-buttons.confirm{
+    flex-direction: column;
+}
+
+.modal-buttons .button {
+    all: unset;
+    padding: 10px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+
+.modal-buttons .button.confirm {
+    background-color: #a1c92a;
+    border: 1px solid #f1f0f0;
+    color: #f1f0f0;
+    cursor: pointer;
+}
+
+
+.modal-buttons .button.confirm:hover {
+    background-color: #89ad1d;
+}
+
+.button.confirm.create {
+    background-color: #33BBED;
+    color: #f1f0f0;
+    cursor: pointer;
+}
+
+.button.confirm.create:hover {
+    background-color: #1d93be;
+}
+
+
+
+
+
+
+/* Responsividade */
+@media (max-width: 600px) {
+    #create-form {
+        padding: 15px;
+    }
+
+    .modal-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .modal-buttons .button {
+        width: 100%;
+    }
+
+    .modal-buttons .button {
+        padding: 2px 2px;
+    }
+}
+
+/* #endregion */
+
+/* #region Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80%;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+}
+
+#modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-title {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+
+.modal-overlay.show {
+    display: flex;
+}
+
+/* #endregion */
+
+@media screen and (max-width: 480px) {
+    .event-card-button{
+        font-size: 15px;
+    }
+
+    #create-form {
+        font-size: 15px;
+    }
+    #create-form h2#modal-title {
+        font-size: 25px;
+    }
+
+    #create-form input[type="text"],
+    #create-form input[type="date"],
+    #create-form input[type="time"],
+    #create-form input[type="number"],
+    #create-form textarea,
+    #create-form select {
+        padding: 10px;
+        font-size: 15px;
+    }
+}

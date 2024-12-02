@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar evento</title>
+    <link rel="stylesheet" href="solicitar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="img/estrelacolorida.jpg" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <div id="flex">
+        <aside id="info">
+            <a href="paginainicial.html"><img src="img/Logo (1).png" id="logo"></a>
+
+            <section id="functions">
+                <div class="main-container">
+                    <div class="item user-info">
+                        <img src="img/imagem-do-usuario-com-fundo-preto.png" id="user_photo">
+                        <h1 id="nome_usuario">Nome do Usuário</h1>
+                    </div>
+                    <a href="perfil.html">
+                        <div class="item">
+                            <img src="img/perfil_aberto.png" alt="Imagem 1">
+                            <h3 >Perfil</h3>
+                        </div>
+                    </a>
+                    <a href="solicitarEvento.html">
+                        <div class="item">
+                            <img src="img/solicitar_fechado.png" alt="Imagem 2">
+                            <h3 id="negrito">Solicitar evento</h3>
+                        </div>
+                    </a>
+                    <a href="status.html">
+                        <div class="item">
+                            <img src="img/status-do-projeto (1).png" alt="Imagem 3">
+                            <h3>Status de solicitação</h3>
+                        </div>
+                    </a>
+                    <a href="paginainicial.html">
+                        <div class="item" id="sair">
+                            <img src="img/sair.png" alt="Imagem 5">
+                            <h3>Sair</h3>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+        </aside>
+        <main>
+
+            <div class="container">
+                <div class="form">
+                    <form action="#">
+                        <div class="form-header">
+                            <div class="sair">
+                                <a href="paginainicial.html">
+                                    <i class="fa-solid fa-arrow-left"></i>
+                                </a>
+                                
+                                <h1>Solicitar evento</h1>
+                            </div>
+
+                        </div>
+                        <p class="form-description">Preencha as informações abaixo para solicitar um evento.</p>
+
+                        <div class="form-group">
+                            <input type="text" placeholder="Nome do evento">
+                        </div>
+                        <div class="form-group">
+                            <input type="date" placeholder="Escolha o dia" class="half-width">
+                            <input type="time" placeholder="Escolha o horário" class="half-width">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Local" class="half-width">
+                            <input type="text" placeholder="Duração (HH:MM:SS)" class="half-width">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" placeholder="Número de vagas" class="half-width">
+                            <input type="text" placeholder="Nome do Responsável" class="half-width">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Descrição" rows="4"></textarea>
+                        </div>
+                        <div class="buttons">
+                            <button type="button" class="cancel-btn">CANCELAR</button>
+                            <button type="submit" class="submit-btn">ENVIAR</button>
+                        </div>
+                        <div class="images">
+                            <img src="img/bingo.png" alt="Imagem de bingo">
+                            <img src="img/bingo2.png" alt="Imagem de reunião">
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+   
+    <script src="solicitar.js"></script>
+
+    <footer>
+        <h3>© 2024 ONG Solidariedade. Todos os direitos reservados.</h3>
+    </footer>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+<script>
+    document.getElementById('sair').addEventListener('click', function(event) {
+        // Previne o comportamento padrão do link
+        event.preventDefault();
+
+        // Remover o token do localStorage
+        localStorage.removeItem('token'); // ou sessionStorage.removeItem('token') se for o caso
+
+        // Redirecionar para a página de login
+        window.location.href = 'paginainicial.html'; // Ou qualquer página de login
+    });
+</script>
+</html>
+

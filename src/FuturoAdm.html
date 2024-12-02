@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrador</title>
+    <link rel="stylesheet" href="CabecalhoAdm.css">
+    <link rel="stylesheet" href="FuturoAdm.css">
+    <link href='https://fonts.googleapis.com/css?family=Sora' rel='stylesheet'>
+    <script src="/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <img src="./logos/logopaginaprincipal3.png" alt="Logo da Empresa">
+        <div class="title-container">
+            <h1>Painel de Administrador</h1>
+        </div>
+
+        <div class="container-options">
+            <button class="btn-main">☰ Opções</button>
+            <div class="options">
+                <a href="CriarAdm.html">Adicionar Evento</a>
+                <a href="SolicitacaoAdm.html">Solicitações de Eventos</a>
+                <a href="#">Eventos Futuros</a>
+                <a href="RelatorioAdm.html">Relatório de Eventos</a>
+            </div>
+            <button id="sair" href="#" onclick="logout(event)">>Sair</button>
+        </div>
+
+        <div class="menu">
+            <a href="CriarAdm.html">
+                <i class="fas fa-calendar-plus"></i>
+                Criar Evento</a>
+            <a href="SolicitacaoAdm.html">
+                <i class="fas fa-envelope-open-text"></i> Solicitações de Eventos</a>
+            <a href="#">
+                <i class="fas fa-calendar-alt"></i> Eventos Futuros</a>
+            <a href="RelatorioAdm.html">
+                <i class="fas fa-chart-bar"></i>
+                Relatório de Eventos</a>
+            <a id="sair" href="#" onclick="logout(event)">
+                <i class="fas fa-sign-out-alt"></i> Sair
+            </a>
+        </div>
+    </header>
+
+
+    <section class="upcoming-events-section" id="event-request-section">
+        <div class="section-title" id="upcoming-events-title">
+            <h2><i class="fas fa-calendar-alt"></i> Eventos Futuros</h2>
+        </div>
+        <div class="event-cards-container" id="event-cards-container">
+            <div class="event-card" id="upcoming-events-card">
+            </div>
+        </div>
+    </section>
+
+    <div class="confirmation">
+        <div class="modal-overlay" id="modal">
+            <div class="modal-content">
+                <h2 class="modal-title" id="modal-title"></h2>
+                <input type="hidden" name="event_id" id="Event_id" value="" />
+                <input type="hidden" name="confirm" id="confirm" value="" />
+                <button type="button" onclick="closeModal('modal')"
+                    class="event-card-button reject cancel">Cancelar</button>
+                <button type="button" onclick="confirmEvent()" class="event-card-button accept excluir">Excluir</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="confirmation">
+        <div class="modal-overlay" id="modal-edit">
+            <div class="modal-content">
+                <form id="edit-form">
+                    <h2 id="modal-title">Atualizar Evento</h2>
+
+                    <!-- Campos ocultos para ID e confirmação -->
+                    <input type="hidden" name="event_ID" id="event_ID" value="" />
+                    <input type="hidden" name="confirmation" id="confirmation" value="" />
+
+                    <!-- Nome do Evento -->
+                    <label for="event_name">🎈Nome do Evento:</label>
+                    <input type="text" name="event_name" id="event_name" required aria-required="true" />
+
+                    <!-- Descrição -->
+                    <label for="event_description">📝Descrição:</label>
+                    <textarea name="event_description" id="event_description" required aria-required="true"></textarea>
+
+                    <!-- Status -->
+                    <label for="event_status">🟡Status:</label>
+                    <select name="event_status" id="event_status" required aria-required="true">
+                        <option value="em analise">Em Análise</option>
+                        <option value="aprovado">Aprovado</option>
+                        <option value="reprovado">Reprovado</option>
+                    </select>
+
+                    <!-- Data -->
+                    <label for="event_date">🗓️Data:</label>
+                    <input type="date" name="event_date" id="event_date" required aria-required="true" />
+
+                    <!-- Horário -->
+                    <label for="event_time">🕒Horário:</label>
+                    <input type="time" name="event_time" id="event_time" required aria-required="true" />
+
+                    <!-- Número de Vagas -->
+                    <label for="event_slots">🧑‍🤝‍🧑Número de Vagas:</label>
+                    <input type="number" name="event_slots" id="event_slots" required aria-required="true" />
+
+                    <!-- Local -->
+                    <label for="event_location">📍Local:</label>
+                    <input type="text" name="event_location" id="event_location" required aria-required="true" />
+
+                    <!-- Duração -->
+                    <label for="event_duration">⏳Duração:</label>
+                    <input type="time" name="event_duration" id="event_duration" required aria-required="true" />
+
+                    <!-- Nome do Responsável -->
+                    <label for="event_responsible">🙋Nome do Responsável:</label>
+                    <input type="text" name="event_responsible" id="event_responsible" required aria-required="true" />
+
+                    <!-- Botões -->
+                    <div class="modal-buttons">
+                        <button type="button" onclick="closeModal('modal-edit')" class="button cancel">Fechar</button>
+                        <button type="submit" class="button confirm">Confirmar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="FuturoAdm.js"></script>
+    <script src="CabecalhoAdm.js"></script>
+</body>
+
+</html>

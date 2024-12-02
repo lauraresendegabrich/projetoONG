@@ -1,0 +1,2103 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;300;400;500;700;800&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Sora', sans-serif;
+}
+
+
+/*Aqui inicia o código do cabeçalho*/
+
+.logotipo {
+    width: 125px;
+}
+
+#logo {
+    width: 125px;
+    height: 49px;
+}
+
+header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 2;
+    margin-top: 20px;
+}
+
+#img-logo{
+    margin-left: 55px;
+}
+
+nav ul {
+    margin-top: 7px;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.a-nav{
+    font-size: 14px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0 20px;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+.hamburguer {
+    display: none;
+    height: fit-content;
+    cursor: pointer;
+    padding: 3px 8px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.hamburguer div {
+    width: 30px;
+    height: 2px;
+    margin: 6px 0;
+    background-color: white;
+    cursor: pointer;
+}
+
+.login{
+    display: flex;
+    gap: 30px;
+    margin-right: 55px;
+    margin-left: 50px;
+}
+
+#entrar {
+    font-size: 17px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+#entrar a{
+    color: white;
+    text-decoration: none;
+}
+
+#cadastro a{
+    color:#232323;
+    text-decoration: none;
+}
+
+#cadastro {
+    width: 150px;
+    font-size: 17px;
+    background: white;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    color: #232323;
+    cursor: pointer;
+}
+
+/* Estilos para o link de perfil */
+#perfil {
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+   
+}
+
+#perfil a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    
+}
+
+.profile-icon {
+    width: 18px; /* Ajuste o tamanho conforme necessário */
+    height: 18px;
+    border-radius: 50%; /* Deixa a imagem circular, se desejar */
+}
+
+@media (min-width: 1350px) {
+
+    /*Aqui inicia o código do main*/
+
+    main {
+        max-width: 100%;
+    }
+
+    .banner {
+        width: 100%;
+        height: 620px;
+        background: url(imagem/Banner.png);
+        background-size: cover;
+        z-index: 1;
+    }
+
+    .banner_text {
+        position: absolute;
+        margin-top: 180px;
+        color: white;
+        padding: 0px 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+
+    .banner_text h1 {
+        font-size: 69px;
+    }
+
+    .banner_text p {
+        font-size: 22px;
+        font-weight: 300;
+        width: 800px;
+    }
+
+    .banner_text a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .banner_text button {
+        color: white;
+        font-size: 24px;
+        font-weight: 700;
+        width: 390px;
+        padding: 15px;
+        background: none;
+        border: solid white 2px;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+
+    /*Calendario*/
+    /* Estilização geral do calendário */
+    #calendar {
+    max-width: 100%;
+    background-color: #f9f9f9; /* Cor de fundo do calendário */
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    }
+
+    /* Cabeçalho do calendário */
+    .fc-toolbar-title {
+    font-size: 24px !important; /* Tamanho do título */
+    color: #282828; /* Cor do título */
+    
+    }
+
+    /* Cor do texto dos dias da semana */
+    .fc-col-header-cell {
+    color: #9ac41c!important;
+    font-weight: bold;
+    }
+
+   /* Cor do texto dos dias da semana (Segunda, Terça, etc.) */
+   .fc .fc-col-header-cell-cushion {
+    color: #9ac41c !important; /* Cor do texto dos dias da semana */
+    font-weight: bold; /* Negrito para os dias da semana */
+    }
+
+    /* Cor dos números dos dias no calendário */
+    .fc .fc-daygrid-day-number {
+    color: #282828 !important; /* Cor dos números dos dias */
+    font-weight: bold; /* Negrito para os números dos dias */
+    font-size: 14px; /* Tamanho da fonte dos números dos dias */
+    }
+   
+
+   /* Estilização dos eventos */
+   .fc-event {
+    background-color: #33bbed; /* Cor de fundo dos eventos */
+    color: white; /* Cor do texto dos eventos */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 3px; /* Espaçamento interno */
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: box-shadow 0.3s ease-in-out; /* Transição suave ao passar o mouse */
+   
+    }
+
+    .fc-event:hover {
+    background-color: #0056b3 !important; /* Cor de fundo ao passar o mouse */
+    color: #f0f0f0; /* Cor do texto ao passar o mouse, para contraste */
+    transform: translateY(-2px); /* Leve elevação do evento para efeito de clique */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
+    cursor: pointer;
+    }
+    .fc-event .fc-title {
+    font-size: 14px;
+    font-weight: bold;
+    white-space: normal; /* Permite a quebra de linha do título */
+    word-wrap: break-word; /* Quebra a palavra se for muito longa */
+    line-height: 1.3; /* Ajuste da altura da linha para mais espaço entre as linhas do título */
+    }
+
+   /* Cor de fundo dos dias sem eventos */
+   .fc-daygrid-day {
+    background-color: #fff; /* Cor de fundo */
+    }
+
+    /* Estilizar o dia atual */
+    .fc-day-today {
+    background-color: #e9ecef; /* Cor de fundo do dia atual */
+    }
+    /* Customizando o modal */
+.modal-content {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-title {
+    font-size: 1.25rem;
+}
+
+.modal-body p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+    .fc-button {
+        background-color: #9ac41c !important; /* Cor de fundo */
+        color: white; /* Cor do texto */
+        border: none !important; /* Remove borda */
+        border-radius: 5px; /* Bordas arredondadas */
+        padding: 8px 12px; /* Espaçamento interno */
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s ease !important; /* Transição suave para hover */
+        box-shadow:0px 4px 8px rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    /* Cor de fundo ao passar o mouse sobre os botões */
+    .fc-button:hover {
+        background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+    }
+    
+    /* Cor de fundo e estilo ao clicar */
+    .fc-button:active {
+        background-color: #003f7f; /* Cor de fundo ao clicar */
+        transform: scale(0.98); /* Leve efeito de clique */
+    }
+    
+    /* Botão de "Hoje" com estilo específico */
+    .fc-today-button {
+        background-color: #28a745; /* Cor diferente para o botão de "Hoje" */
+        color: white;
+    }
+    
+    /* Estilo do botão de "Hoje" ao passar o mouse */
+    .fc-today-button:hover {
+        background-color: #218838;
+    }
+
+   
+
+
+
+    /*Código das doações necessárias*/
+
+    .donate_container {
+        padding: 0px 60px;
+        position: relative;
+        top: -90px;
+    }
+
+    .donate {
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 30px;
+        padding: 30px 60px;
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .donate h1 {
+        color: #232323;
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    #ShowMore {
+        color: #9A9A9A;
+        font-size: 20px;
+        background: none;
+        border: none;
+        display: block;
+        margin: auto;
+        cursor: pointer;
+    }
+
+    #ShowMore i {
+        color: #7D7D7D;
+        font-size: 15px;
+    }
+
+    
+    
+
+    /*Mapa*/
+
+    .mapa {
+        padding: 60px;
+    }
+
+    #map {
+        width: 100%;
+        height: 450px;
+        border: 0;
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    /*Aqui inicia o código das pessoas*/
+
+    .need_donate {
+        padding: 0px 60px;
+    }
+
+    .need {
+       
+        border-radius: 50px;
+        padding: 40px 60px;
+        border-color: #33BBED;
+        border-style: solid;
+        
+    }
+
+   
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .top p {
+        font-size: 75px;
+        color: #33BBED;
+        font-weight: 510;
+    }
+
+    .top button {
+        background: none;
+        border-radius: 100px;
+        border: solid #7A7A7A 2px;
+        padding: 15px;
+        width: 350px;
+        font-size: 25px;
+        color: #7A7A7A;
+        cursor: pointer;
+    }
+
+
+    
+
+   
+    
+    /*Cards */
+
+    .workshops-container {
+        display: flex;
+        gap: 50px;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1200px;
+    }
+  
+    .workshops-container .card {
+        border: 2px solid #00AEEF;
+        padding: 50px;
+        border-radius: 25px;
+        width: 350px;
+        height: 450px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: white;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+  
+    .workshops-container .card h2 {
+        color: #333;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+    }
+  
+    .workshops-container .card hr {
+        border: none;
+        border-top: 4px solid #9ac41c;
+        width: 100%;
+        margin: 0px 0;
+        opacity: 1; /* Garante que a opacidade seja 100% */
+    }
+  
+    .workshops-container .card p {
+        margin: 5px 0;
+        font-size: 14px;
+        color: #555;
+    }
+  
+    .workshops-container .card .info {
+        display: inline-block;
+        align-items: center;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+  
+    .workshops-container .card .info i {
+        
+        margin-right: 8px;
+     }
+  
+    .workshops-container .button {
+        background-color: white;
+        border-color: #33bbede4;
+        border-style: solid;
+        border-width: 2px;
+        color: #33BBED;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+        text-transform: uppercase;
+        margin-top: 10px;
+    }
+  
+    .workshops-container .button:hover {
+        background-color: #33BBED;
+        color: white;
+    }
+
+    /* Inicialmente escondemos todos os cards além dos 3 primeiros */
+    .workshops-container .card:nth-child(n+4) {
+    display: none;
+    }
+
+    /* Quando o botão "Visualizar todos" é clicado, mostramos todos os cards */
+    .workshops-container.show-all .card:nth-child(n+4) {
+    display: block;
+    }
+
+    
+    /*Quem pode doar?*/
+
+    #quem-pode{
+        padding: 40px 0;
+        display: flex;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .doando{
+        height: 550px;
+    }
+
+    .quem-pode-flex h1{
+        color: #33BBED;
+        font-size: 64px;
+        font-weight: 400;
+    }
+
+    .quem-pode-flex p{
+        color: #7A7A7A;
+        text-align: justify;
+        font-size: 20px;
+        width: 90%;
+        font-weight: 300;
+    }
+
+     /*premiações*/
+
+     #premio{
+        padding: 40px 0;
+        display: flex;
+        align-items: center;
+        gap: 60px;
+    }
+    .premio-flex{
+        padding-left: 60px;
+    }
+    .premio-flex h1{
+        color: #33BBED;
+        font-size: 64px;
+        font-weight: 400;
+    }
+
+    .premio-flex p{
+        color: #7A7A7A;
+        text-align: justify;
+        font-size: 20px;
+        width: 90%;
+        font-weight: 300;
+    }
+
+
+    /*Quem somos?*/
+
+    #quem-somos{
+        padding: 0px 55px;
+    }
+    
+    #quem-somos div{
+        background-color: #33BBED;
+        padding: 30px 60px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        align-items: center;
+        color: white;
+    }
+    
+    #quem-somos h1{
+        font-size: 65px;
+        font-weight: 400;
+        width: 500px;
+        
+    }
+    
+    #quem-somos p{
+        font-size: 20px;
+        font-weight: 300;
+        text-align: justify;
+    }
+
+    /*Nossas acoes*/
+
+    #nossas-acoes{
+        margin-top: 60px;
+
+    }
+    .carousel-item img {
+        height: 600px; 
+        object-fit: cover; 
+    }
+    #nossas-acoes h1{
+        color: #33BBED;
+        font-size: 60px;
+        margin-bottom: 20px;
+        padding-left: 60px;
+    }
+
+    /*Parceiros*/
+
+    #parceiros{
+        margin-top: 60px;
+        
+    }
+
+    #parceiros h1{
+        color: #33BBED;
+        font-size: 60px;
+        margin-bottom: 20px;
+        padding-left: 60px;
+    }
+   
+
+    .partner-image {
+        max-width:300px; /* Ajuste o tamanho da imagem conforme desejado */
+        max-height: 300px; /* A altura deve ser igual à largura para garantir que a forma seja um círculo */
+        object-fit: cover;
+        border: 2px solid #007bff; /* Adiciona uma borda, se desejar */
+        margin-bottom: 10px; /* Espaço entre a imagem e a descrição */
+        border-radius: 50%; /* Garante que a imagem seja um círculo */
+       
+        
+    }
+    
+   
+
+       /*mapa*/
+    #mapa{
+        background-color: #33BBED;
+    }
+
+
+
+    /*Aqui inicia o código do rodapé*/
+
+    footer {
+        padding: 30px 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #33BBED;
+    }
+
+    #info_rodape {
+        color: white;
+        list-style: none;
+        font-weight: 300;
+    }
+
+    #redes_sociais {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    #redes_sociais i {
+        text-align: center;
+        font-size: 35px;
+        color: #33BBED;
+        background-color: white;
+        height: 55px;
+        width: 55px;
+        padding: 10px;
+        border-radius: 100px;
+        transition: 0.8s;
+    }
+
+    #logo{
+     
+        width: 200px;
+        height: 63px;
+
+
+    }
+
+    #redes_sociais i:hover {
+        color: white;
+        background: none;
+        border: solid white 0.1px;
+        scale: 110%;
+    }
+
+    
+
+    #endereco_rodape {
+        color: white;
+        font-weight: 300;
+        margin-left: 5px;
+    }
+
+}
+
+@media (max-width: 1350px) and (min-width: 500px){
+
+    /*Aqui inicia o código do cabeçalho*/
+
+    .logotipo {
+        width: 90px;
+    }
+
+    nav {
+        position: fixed;
+        left: -300px;
+        top: 0;
+        z-index: 15;
+        width: 280px;
+        height: 100%;
+        background-color: white;
+        transition: 0.5s;
+        box-shadow: 2px 0 20px 0 rgb(0, 0, 0, 0.5);
+    }
+
+    .a-nav{
+        color: #232323;
+        font-weight: 500;
+        padding: 0;
+    }
+
+    #nav_check:checked~nav {
+        left: 0;
+    }
+
+    .logo2 {
+        height: 39px;
+        width: 100px;
+        background: url(img/LOGO-COLORIDO.png);
+        background-size: cover;
+    }
+
+    nav .logo {
+        display: block;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    nav ul li {
+        padding: 10px 0;
+        width: 100%;
+        cursor: pointer;
+    }
+
+
+    .hamburguer {
+        display: block;
+        margin-right: 55px;
+    }
+
+    .login{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin: 200px 0px 0px 0px;
+    }
+   
+    
+    #entrar a{
+        color: white;
+        text-decoration: none;
+    }
+
+    #cadastro a{
+        color: white;
+        text-decoration: none;
+    }
+    
+    #cadastro {
+        width: 230px;
+        font-size: 17px;
+        padding: 10px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        background-color: #33BBED;
+        margin: 2px;
+    }
+    #perfil{
+        background-color: #33bbed;
+    }
+
+    #entrar {
+        width: 230px;
+        font-size: 17px;
+        padding: 10px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        background-color: #33BBED;
+        margin: 2px;
+    }
+
+    /*Aqui inicia o código do main*/
+
+    main {
+        max-width: 100%;
+    }
+
+    .banner {
+        width: 100%;
+        height: 620px;
+        background: url(imagem/Banner.png);
+        background-size: cover;
+        z-index: 1;
+    }
+
+    .banner_text {
+        position: absolute;
+        margin-top: 180px;
+        color: white;
+        padding: 0px 55px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+
+    .banner_text h1 {
+        font-size: 40px;
+    }
+
+    .banner_text p {
+        font-size: 20px;
+        font-weight: 300;
+        width: 500px;
+    }
+
+    .banner_text a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .banner_text button {
+        color: white;
+        font-size: 25px;
+        font-weight: 700;
+        width: 400px;
+        padding: 10px;
+        background: none;
+        border: solid white 2px;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+
+    /*Calendario*/
+    /* Estilização geral do calendário */
+    #calendar {
+        max-width: 100%;
+        background-color: #f9f9f9; /* Cor de fundo do calendário */
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+        }
+    
+        /* Cabeçalho do calendário */
+        .fc-toolbar-title {
+        font-size: 15px !important; /* Tamanho do título */
+        color: #282828; /* Cor do título */
+        
+        }
+    
+        /* Cor do texto dos dias da semana */
+        .fc-col-header-cell {
+        color: #9ac41c!important;
+        font-weight: bold;
+        font-size: 12px !important;
+        
+        }
+    
+       /* Cor do texto dos dias da semana (Segunda, Terça, etc.) */
+       .fc .fc-col-header-cell-cushion {
+        color: #9ac41c !important; /* Cor do texto dos dias da semana */
+        font-weight: bold; /* Negrito para os dias da semana */
+        }
+    
+        /* Cor dos números dos dias no calendário */
+    .fc .fc-daygrid-day-number {
+        color: #282828 !important; /* Cor dos números dos dias */
+        font-weight: bold; /* Negrito para os números dos dias */
+        font-size: 14px; /* Tamanho da fonte dos números dos dias */
+    }
+       
+    
+       
+      /* Estilização dos eventos */
+    .fc-event {
+    background-color: #33bbed; /* Cor de fundo dos eventos */
+    color: white; /* Cor do texto dos eventos */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 3px; /* Espaçamento interno */
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: box-shadow 0.3s ease-in-out; /* Transição suave ao passar o mouse */
+   
+    }
+    
+        /* Cor ao passar o mouse sobre um evento */
+        .fc-event:hover {
+        background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+        cursor: pointer;
+        }
+    
+       /* Cor de fundo dos dias sem eventos */
+       .fc-daygrid-day {
+        background-color: #fff; /* Cor de fundo */
+        }
+    
+        /* Estilizar o dia atual */
+        .fc-day-today {
+        background-color: #e9ecef; /* Cor de fundo do dia atual */
+        }
+    
+        .fc-button {
+            background-color: #9ac41c !important; /* Cor de fundo */
+            color: white; /* Cor do texto */
+            border: none !important; /* Remove borda */
+            border-radius: 5px; /* Bordas arredondadas */
+            padding: 8px 12px; /* Espaçamento interno */
+            font-size: 10px !important;
+            cursor: pointer;
+            transition: background-color 0.3s ease !important; /* Transição suave para hover */
+            box-shadow:0px 4px 8px rgba(0, 0, 0, 0.1) !important;
+        }
+        
+        /* Cor de fundo ao passar o mouse sobre os botões */
+        .fc-button:hover {
+            background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+        }
+        
+        /* Cor de fundo e estilo ao clicar */
+        .fc-button:active {
+            background-color: #003f7f; /* Cor de fundo ao clicar */
+            transform: scale(0.98); /* Leve efeito de clique */
+        }
+        
+        /* Botão de "Hoje" com estilo específico */
+        .fc-today-button {
+            background-color: #28a745; /* Cor diferente para o botão de "Hoje" */
+            color: white;
+        }
+        
+        /* Estilo do botão de "Hoje" ao passar o mouse */
+        .fc-today-button:hover {
+            background-color: #218838;
+        }
+         /* Customizando o modal */
+.modal-content {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-title {
+    font-size: 1.25rem;
+}
+
+.modal-body p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+    
+
+    /*Código das doações necessárias*/
+
+    .donate_container {
+        padding: 0px 55px;
+        position: relative;
+        top: -90px;
+    }
+
+    .donate {
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 30px;
+        padding: 30px 55px;
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .donate h1 {
+        color: #232323;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    #ShowMore {
+        color: #9A9A9A;
+        font-size: 12px;
+        background: none;
+        border: none;
+        display: block;
+        margin: auto;
+        cursor: pointer;
+    }
+
+    #ShowMore i {
+        color: #7D7D7D;
+        font-size: 10px;
+    }
+
+   
+
+    /*Mapa*/
+
+    .mapa {
+        padding: 55px;
+    }
+
+    #map {
+        width: 100%;
+        height: 200px;
+        border: 0;
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    /*Aqui inicia o código das pessoas*/
+
+    .need_donate {
+        padding: 0px 55px;
+    }
+
+    .need {
+       
+        border-radius: 50px;
+        padding: 40px 60px;
+        border-color: #33BBED;
+        border-style: solid;
+        
+    }
+
+   
+
+    .top {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+        gap: 30px;
+       
+    }
+
+    .top p {
+        font-size: 45px;
+        color: #33BBED;
+        font-weight: 510;
+    }
+
+    .top button {
+        background: none;
+        color: #7A7A7A;
+        border-radius: 100px;
+        border: solid #7A7A7A 2px;
+        padding: 10px;
+        width: 350px;
+        font-size: 16px;
+        cursor: pointer;
+        
+        
+    }
+
+    
+
+     /*Cards */
+
+     .workshops-container {
+        display: flex;
+        gap: 50px;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1200px;
+    }
+  
+    .workshops-container .card {
+        border: 2px solid #00AEEF;
+        padding: 50px;
+        border-radius: 25px;
+        width: 350px;
+        height: 450px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: white;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+  
+    .workshops-container .card h2 {
+        color: #333;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+    }
+  
+    .workshops-container .card hr {
+        border: none;
+        border-top: 4px solid #9ac41c;
+        width: 100%;
+        margin: 0px 0;
+        opacity: 1; /* Garante que a opacidade seja 100% */
+    }
+  
+    .workshops-container .card p {
+        margin: 5px 0;
+        font-size: 14px;
+        color: #555;
+    }
+  
+    .workshops-container .card .info {
+        
+        align-items: center;
+        font-size: 14px;
+        margin-bottom: 5px;
+        display: inline-block;
+    }
+  
+    .workshops-container .card .info i {
+        
+        margin-right: 8px;
+     }
+  
+    .workshops-container .button {
+        background-color: white;
+        border-color: #33bbede4;
+        border-style: solid;
+        border-width: 2px;
+        color: #33BBED;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+        text-transform: uppercase;
+        margin-top: 10px;
+    }
+  
+    .workshops-container .button:hover {
+        background-color: #33BBED;
+        color: white;
+    }
+    /* Inicialmente escondemos todos os cards além dos 3 primeiros */
+     
+    .workshops-container .card:nth-child(n+4) {
+    display: none;
+    }
+    
+    /* Quando o botão "Visualizar todos" é clicado, mostramos todos os cards */
+    .workshops-container.show-all .card:nth-child(n+4) {
+     display: block;
+    }
+
+
+    /*Quem pode doar?*/
+
+    #quem-pode{
+        padding: 40px 0;
+        display: flex;
+        align-items: center;
+        gap: 60px;
+
+    }
+
+    .doando{
+        height: 300px;
+    }
+
+    .quem-pode-flex h1{
+        color: #33bbed;
+        font-size: 40px;
+        font-weight: 400;
+    }
+
+    .quem-pode-flex p{
+        color: #7A7A7A;
+        text-align: justify;
+        font-size: 15px;
+        width: 90%;
+        font-weight: 300;
+    }
+    /*premiações*/
+
+    #premio{
+        padding: 40px 0;
+        display: flex;
+        align-items: center;
+        gap: 60px;
+    }
+  
+    .premio-flex h1{
+        color: #33BBED;
+        font-size: 40px;
+        font-weight: 400;
+        
+    }
+    .premio-flex{
+        padding-left: 45px;
+    }
+
+    .doando2{
+        height: 300px;
+    }
+
+    .premio-flex p{
+        color: #7A7A7A;
+        text-align: justify;
+        font-size: 15px;
+        width: 90%;
+        font-weight: 300;
+    }
+
+
+    /*Quem somos?*/
+
+    #quem-somos{
+        padding: 0px 55px;
+    }
+    
+    #quem-somos div{
+        background-color: #33bbed;
+        padding: 10px 60px;
+        border-radius: 30px;
+        display: flex;
+        
+        justify-content: space-between;
+        gap: 30px;
+        align-items: center;
+        color: white;
+    }
+    
+    #quem-somos h1{
+        font-size: 45px;
+        font-weight: 400;
+        width: 500px;
+    }
+    
+    #quem-somos p{
+        font-size: 20px;
+        font-weight: 300;
+        text-align: justify;
+    }
+
+
+    /*Nossas acoes*/
+
+    #nossas-acoes{
+        margin-top: 60px;
+
+    }
+    .carousel-item img {
+        height: 600px; 
+        object-fit: cover; 
+    }
+    #nossas-acoes h1{
+        color: #33BBED;
+        font-size: 60px;
+        margin-bottom: 20px;
+        padding-left: 60px;
+    }
+    #parceiros{
+        margin-top: 60px;
+       
+    }
+
+    #parceiros h1{
+        color: #33BBED;
+        font-size: 60px;
+        margin-bottom: 20px;
+        padding-left: 60px;
+    }
+
+    .partner-image {
+        max-width:300px; /* Ajuste o tamanho da imagem conforme desejado */
+        max-height: 300px; /* A altura deve ser igual à largura para garantir que a forma seja um círculo */
+        object-fit: cover; /* Mantém a proporção da imagem */
+        border: 2px solid #007bff; /* Adiciona uma borda, se desejar */
+        margin-bottom: 10px; /* Espaço entre a imagem e a descrição */
+        border-radius: 50%; /* Garante que a imagem seja um círculo */
+        
+    }
+    
+    .partner-description {
+        font-size: 16px; /* Ajusta o tamanho da fonte da descrição */
+        color: #33BBED; /* Cor da descrição */
+    }
+
+    /*Aqui inicia o código do rodapé*/
+
+    footer {
+        padding: 30px 55px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        background-color: #33bbed;
+        text-align: center;
+    }
+
+    #info_rodape {
+        color: white;
+        list-style: none;
+        font-weight: 300;
+    }
+
+    #redes_sociais {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+    }
+
+    #redes_sociais i {
+        text-align: center;
+        font-size: 15px;
+        color: #33bbed;
+        background-color: white;
+        height: 30px;
+        width: 30px;
+        padding: 8px;
+        border-radius: 100px;
+        cursor: pointer;
+        transition: 0.8s;
+    }
+
+    #redes_sociais i:hover {
+        color: white;
+        background: none;
+        border: solid white 0.1px;
+        scale: 110%;
+    }
+
+   
+
+    #endereco_rodape {
+        color: white;
+        font-weight: 300;
+    }
+
+}
+
+@media (max-width: 600px )  {
+    #quem-pode {
+        flex-direction: column; /* Alinha itens em coluna */
+        padding: 20px;
+        text-align: center;
+    }
+
+    #quem-pode .doando {
+        width: auto; /* Imagem ocupa 100% do espaço em telas pequenas */
+        max-width: none;
+        margin-bottom: 20px;
+    }
+
+    #quem-pode .quem-pode-flex {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #quem-pode h1 {
+        font-size: 28px;
+    }
+
+    #quem-pode p {
+        font-size: 10px;
+    }
+
+    #premio {
+        flex-direction: column; /* Alinha itens em coluna */
+        padding: 20px;
+        text-align: center;
+    }
+    
+    #premio .doando {
+        width: auto; /* A imagem ocupa automaticamente o espaço disponível */
+        max-width: none;
+        margin-bottom: 20px;
+    }
+    
+    .premio-flex {
+        width: 100%;
+        padding: 10px;
+        align-items: center;
+    }
+    
+    .premio-flex h1 {
+        font-size: 28px;
+    }
+    
+    .premio-flex p {
+        font-size: 10px;
+    }
+
+    #quem-somos{
+        padding: 0px 55px;
+    }
+    
+    #quem-somos div{
+        background-color: #33bbed;
+        padding: 10px 30px;
+        border-radius: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px;
+        align-items: center;
+        color: white;
+        justify-content: center; /* Centraliza conteúdo */
+        text-align: center; /* Centraliza o texto */
+    }
+    
+    #quem-somos h1{
+        font-size: 28px;
+        font-weight: 400;
+        width: 500px;
+        align-items: center;
+       
+    }
+    
+    #quem-somos p{
+        font-size: 10px;
+        font-weight: 300;
+        text-align: justify;
+    }
+   
+
+
+}
+
+@media (max-width: 500px){
+
+    /*Aqui inicia o código do cabeçalho*/
+
+    .logotipo {
+        width: 90px;
+    }
+
+    nav {
+        position: fixed;
+        left: -300px;
+        top: 0;
+        z-index: 15;
+        width: 280px;
+        height: 100%;
+        background-color: white;
+        transition: 0.5s;
+        box-shadow: 2px 0 20px 0 rgb(0, 0, 0, 0.5);
+    }
+
+    .a-nav{
+        color: #232323;
+        font-weight: 500;
+        padding: 0;
+    }
+
+    #nav_check:checked~nav {
+        left: 0;
+    }
+
+    .logo2 {
+        height: 39px;
+        width: 100px;
+        background: url(img/LOGO-COLORIDO.png);
+        background-size: cover;
+    }
+
+    nav .logo {
+        display: block;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    nav ul li {
+        padding: 10px 0;
+        width: 100%;
+        cursor: pointer;
+    }
+
+
+    .hamburguer {
+        display: block;
+        margin-right: 55px;
+    }
+
+    .login{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin: 200px 0px 0px 0px;
+    }
+    
+    #entrar a{
+        color: white;
+        text-decoration: none;
+    }
+
+    #cadastro a{
+        color: white;
+        text-decoration: none;
+    }
+    
+    #cadastro {
+        width: 230px;
+        font-size: 17px;
+        padding: 10px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        background-color: #33bbed;
+    }
+
+    #entrar {
+        width: 230px;
+        font-size: 17px;
+        padding: 10px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        background-color: #33bbed;
+    }
+
+    /*Aqui inicia o código do main*/
+
+    main {
+        max-width: 100%;
+    }
+
+    .banner {
+        width: 100%;
+        height: 620px;
+        background: url(imagem/Banner.png);
+        background-size: cover;
+        z-index: 1;
+    }
+
+    .banner_text {
+        position: absolute;
+        margin-top: 180px;
+        color: white;
+        padding: 0px 55px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+
+    .banner_text h1 {
+        font-size: 40px;
+    }
+
+    .banner_text p {
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    .banner_text a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .banner_text button {
+        color: white;
+        font-size: 15px;
+        font-weight: 700;
+        width: 300px;
+        padding: 10px;
+        background: none;
+        border: solid white 2px;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+
+    /*Calendario*/
+    /* Estilização geral do calendário */
+    #calendar {
+        max-width: 100%;
+        background-color: #f9f9f9; /* Cor de fundo do calendário */
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+        }
+    
+        /* Cabeçalho do calendário */
+        .fc-toolbar-title {
+        font-size: 10px !important; /* Tamanho do título */
+        color: #282828; /* Cor do título */
+        
+        }
+    
+        /* Cor do texto dos dias da semana */
+        .fc-col-header-cell {
+        color: #9ac41c!important;
+        font-weight: bold;
+        font-size: 6px !important;
+        }
+    
+       /* Cor do texto dos dias da semana (Segunda, Terça, etc.) */
+       .fc .fc-col-header-cell-cushion {
+        color: #9ac41c !important; /* Cor do texto dos dias da semana */
+        font-weight: bold; /* Negrito para os dias da semana */
+        }
+    
+        /* Cor dos números dos dias no calendário */
+        .fc .fc-daygrid-day-number {
+        color: #282828 !important; /* Cor dos números dos dias */
+        font-weight: bold; /* Negrito para os números dos dias */
+        font-size: 14px; /* Tamanho da fonte dos números dos dias */
+        }
+       
+    
+       /* Estilização dos eventos */
+      /* Estilização dos eventos */
+       .fc-event {
+    background-color: #33bbed; /* Cor de fundo dos eventos */
+    color: white; /* Cor do texto dos eventos */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 3px; /* Espaçamento interno */
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: box-shadow 0.3s ease-in-out; /* Transição suave ao passar o mouse */
+   
+    }
+    
+        /* Cor ao passar o mouse sobre um evento */
+        .fc-event:hover {
+        background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+        }
+    
+       /* Cor de fundo dos dias sem eventos */
+       .fc-daygrid-day {
+        background-color: #fff; /* Cor de fundo */
+        }
+    
+        /* Estilizar o dia atual */
+        .fc-day-today {
+        background-color: #e9ecef; /* Cor de fundo do dia atual */
+        }
+    
+        .fc-button {
+            
+            background-color: #9ac41c !important; /* Cor de fundo */
+            color: white; /* Cor do texto */
+            border: none !important; /* Remove borda */
+            border-radius: 5px; /* Bordas arredondadas */
+            padding: 8px 12px; /* Espaçamento interno */
+            font-size: 8px !important;
+            cursor: pointer;
+            transition: background-color 0.3s ease !important; /* Transição suave para hover */
+            box-shadow:0px 4px 8px rgba(0, 0, 0, 0.1) !important;
+        }
+      
+        
+        /* Cor de fundo ao passar o mouse sobre os botões */
+        .fc-button:hover {
+            background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+        }
+        
+        /* Cor de fundo e estilo ao clicar */
+        .fc-button:active {
+            background-color: #003f7f; /* Cor de fundo ao clicar */
+            transform: scale(0.98); /* Leve efeito de clique */
+        }
+        
+        /* Botão de "Hoje" com estilo específico */
+        .fc-today-button {
+            background-color: #28a745; /* Cor diferente para o botão de "Hoje" */
+            color: white;
+        }
+        
+        /* Estilo do botão de "Hoje" ao passar o mouse */
+        .fc-today-button:hover {
+            background-color: #218838;
+        }
+         /* Customizando o modal */
+.modal-content {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-title {
+    font-size: 1.25rem;
+}
+
+.modal-body p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+    
+
+    /*Código das doações necessárias*/
+
+    .donate_container {
+        padding: 0px 50px;
+        position: relative;
+        top: -90px;
+    }
+
+    .donate {
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 30px;
+        padding: 30px 10px;
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .donate h1 {
+        color: #232323;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 5px;
+    }
+
+    #ShowMore {
+        color: #9A9A9A;
+        font-size: 12px;
+        background: none;
+        border: none;
+        display: block;
+        margin: auto;
+        cursor: pointer;
+    }
+
+    #ShowMore i {
+        color: #7D7D7D;
+        font-size: 10px;
+    }
+
+   
+
+     
+
+    /*Mapa*/
+
+    .mapa {
+        padding: 55px;
+    }
+
+    #map {
+        width: 100%;
+        height: 200px;
+        border: 0;
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    /*Aqui inicia o código das pessoas*/
+
+    .need_donate {
+        padding: 0px 55px;
+    }
+
+    .need {
+       
+        border-radius: 50px;
+        padding: 30px 25px;
+        border-color: #33BBED;
+        border-style: solid;
+        
+    }
+
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+        gap: 10px
+    }
+
+    .top p {
+        font-size: 26px;
+        color: #33BBED;
+        font-weight: 510;
+        margin: 0px;
+    }
+
+    .top button {
+        background: none;
+        color: #7A7A7A;
+        border-radius: 100px;
+        border: solid #7A7A7A 2px;
+        padding: 10px;
+        width: 350px;
+        font-size: 10px;
+        cursor: pointer;
+    }
+
+    
+     /*Cards */
+
+     .workshops-container {
+        gap: 20px;
+        
+    }
+
+    .workshops-container .card {
+        width: 90%; /* Ocupa quase toda a largura da tela */
+        padding: 20px;
+        height: auto; /* Ajusta a altura automaticamente */
+        border-radius: 15px;
+        margin-bottom: 20px; /* Espaço entre os cards */
+        border-color: #33bbed;
+       
+    }
+
+    .workshops-container .card h2 {
+        font-size: 16px;
+    }
+
+    .workshops-container .card p, 
+    .workshops-container .card .info {
+        font-size: 12px; /* Reduz tamanho da fonte */
+    }
+
+    .workshops-container .card .info img {
+        width: 16px; /* Reduz tamanho dos ícones */
+        height: 16px;
+    }
+
+    .workshops-container .button {
+        font-size: 14px;
+        padding: 8px;
+        background-color: white;
+        border-color: #33bbed;
+        color: #33bbed;
+        border-radius: 10px;
+    }
+    .workshops-container .card hr {
+        border: none;
+        border-top: 4px solid #9ac41c;
+        width: 100%;
+        margin: 0px 0;
+        opacity: 1; /* Garante que a opacidade seja 100% */
+    }
+    /* Inicialmente escondemos todos os cards além dos 3 primeiros */
+    .workshops-container .card:nth-child(n+4) {
+    display: none;
+    }
+    
+    /* Quando o botão "Visualizar todos" é clicado, mostramos todos os cards */
+    .workshops-container.show-all .card:nth-child(n+4) {
+    display: block;
+    }
+
+
+    /*Quem pode doar?*/
+
+    #quem-pode{
+        padding: 10px 60px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .doando{
+        height: 200px;
+        
+    }
+
+    .quem-pode-flex h1{
+        color: #33bbed;
+        font-size: 30px;
+        font-weight: 400;
+    }
+    .quem-pode-flex{
+        padding: 0px;
+    }
+
+    .quem-pode-flex p{
+        color: #7A7A7A;
+        text-align: justify;
+        font-size: 10px;
+        width: 100%;
+        font-weight: 300;
+       
+    }
+
+     /*premiações*/
+
+     #premio{
+        padding: 10px 60px;
+        display: flex;
+        flex-wrap: wrap;
+      
+        align-items: center;
+        gap: 20px;
+    }
+    .doando2{
+        height: 200px;
+    }
+    .premio-flex h1{
+        color: #33BBED;
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    .premio-flex p{
+        color: #7A7A7A;
+        text-align: justify;
+        font-size: 10px;
+        width: 100%;
+        font-weight: 300;
+    }
+    /*Quem somos?*/
+
+    #quem-somos{
+        padding: 0px 55px;
+    }
+    
+    #quem-somos div{
+        background-color: #33bbed;
+        padding: 10px 30px;
+        border-radius: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px;
+        align-items: center;
+        color: white;
+    }
+    
+    #quem-somos h1{
+        font-size: 28px;
+        font-weight: 400;
+        width: 500px;
+        
+    }
+    
+    #quem-somos p{
+        font-size: 10px;
+        font-weight: 300;
+        text-align: justify;
+    }
+
+
+    /*Nossas acoes*/
+
+    #nossas-acoes{
+        margin-top: 60px;
+
+    }
+    .carousel-item img {
+        height: 600px; 
+        object-fit: cover; 
+    }
+    #nossas-acoes h1{
+        color: #33BBED;
+        font-size: 45px;
+        margin-bottom: 20px;
+        padding-left: 60px;
+    }
+
+    /*Parceiros*/
+
+    #parceiros{
+        margin-top: 60px;
+        
+    }
+
+    #parceiros h1{
+        color: #33BBED;
+        font-size: 60px;
+        margin-bottom: 20px;
+        padding-left: 60px;
+    }
+   
+
+    .partner-image {
+        max-width:300px; /* Ajuste o tamanho da imagem conforme desejado */
+        max-height: 300px; /* A altura deve ser igual à largura para garantir que a forma seja um círculo */
+        object-fit: cover; /* Mantém a proporção da imagem */
+        border: 2px solid #007bff; /* Adiciona uma borda, se desejar */
+        margin-bottom: 10px; /* Espaço entre a imagem e a descrição */
+        border-radius: 50%; /* Garante que a imagem seja um círculo */
+       
+        
+    }
+    
+    .partner-description {
+        font-size: 16px; /* Ajusta o tamanho da fonte da descrição */
+        color: #33BBED; /* Cor da descrição */
+    }
+
+
+    /*Aqui inicia o código do rodapé*/
+
+    footer {
+        padding: 30px 55px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        background-color: #33bbed;
+        text-align: center;
+    }
+
+    #info_rodape {
+        color: white;
+        list-style: none;
+        font-weight: 300;
+    }
+
+    #redes_sociais {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+    }
+
+    #redes_sociais i {
+        text-align: center;
+        font-size: 15px;
+        color: #33bbed;
+        background-color: white;
+        height: 30px;
+        width: 30px;
+        padding: 8px;
+        border-radius: 100px;
+        cursor: pointer;
+        transition: 0.8s;
+    }
+
+    #redes_sociais i:hover {
+        color: white;
+        background: none;
+        border: solid white 0.1px;
+        scale: 110%;
+    }
+
+    #youtube {
+        font-size: 40px;
+    }
+
+    #endereco_rodape {
+        color: white;
+        font-weight: 300;
+    }
+
+}

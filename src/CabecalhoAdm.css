@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    background-color: #e2e2e2;
+    font-family: 'Sora';
+    font-size: 22px;
+    height: 100vh;
+}
+
+/* Header fixo à esquerda */
+.header {
+    background-color: #33BBED;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: width 0.3s ease;
+    /* Ajuste de largura dinâmico */
+    width: clamp(200px, 20vw, 300px);
+    padding: 20px;
+}
+
+    /* Logo da empresa */
+    .header img {
+        width: clamp(80px, 15vw, 150px);
+    }
+
+/* Título do painel */
+.title-container h1 {
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(236, 236, 236);
+    margin-top: 15px;
+}
+
+.container-options {
+    position: relative; /* Torna o container o ponto de referência para o posicionamento */
+    display: none;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.options {
+    display: none; /* Inicialmente escondido */
+    position: absolute; /* Posiciona em relação ao container */
+    top: 100%; /* Alinha exatamente abaixo do botão */
+    left: 0; /* Alinha à borda esquerda do botão */
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px 0;
+    min-width: 150px;
+    z-index: 10; /* Garante que o menu fique acima de outros elementos */
+}
+
+.container-options button {
+    background-color: #33BBED;
+    text-decoration: none;
+    color: #ececec;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #e2e2e2;
+    cursor: pointer;
+}
+
+    .container-options button:hover {
+        background-color: #1c89b1;
+    }
+
+.options a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s;
+}
+
+    .options a:hover {
+        background-color: #33BBED;
+    }
+
+/* Mostrar as opções quando o botão for clicado */
+.options.show {
+    display: block;
+}
+
+/* Estilos para o menu de navegação */
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+    /* Links de navegação */
+    .menu a {
+        text-decoration: none;
+        color: #ececec;
+        font-size: clamp(1rem, 1.5vw, 1.8rem);
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+        /* Efeito de hover nos links do menu */
+        .menu a:hover {
+            background-color: #16a7db;
+            font-weight: bold;
+        }
+
+
+/* Responsividade para telas menores */
+@media screen and (max-width: 1024px) {
+    .header {
+        width: 200px;
+        padding: 15px;
+    }
+
+    .container-options {
+        display: none;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+    }
+
+        .menu a {
+            font-size: 1rem;
+            padding: 10px;
+            width: auto;
+        }
+}
+
+/* Responsividade para telas muito pequenas */
+@media screen and (max-width: 768px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    .header {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        border-radius: 0%;
+    }
+
+    .container-options {
+        display: flex;
+    }
+
+    .title-container h1 {
+        font-size: 25px;
+    }
+
+    .header img {
+        width: 200px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+        .menu a {
+            font-size: 1rem;
+            padding: 8px;
+        }
+}
+
+/* Ajustes para smartphones */
+@media screen and (max-width: 480px) {
+
+    .header {
+        width: 100%;
+        padding: 10px;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        border-radius: 0px;
+        margin: 0%;
+    }
+
+        .header img {
+            width: 180px;
+            margin-top: 20px;
+        }
+
+    .title-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .menu {
+        display: none;
+    }
+
+        .menu a {
+            font-size: 0.8rem;
+            padding: 6px;
+        }
+}
+
+/* Ajustes para telas grandes */
+@media screen and (min-width: 1440px) {
+    .header {
+        width: 300px;
+    }
+
+        .header img {
+            width: 200px;
+        }
+
+    .title-container h1 {
+        font-size: 2.2rem;
+    }
+
+    .menu a {
+        padding: 20px;
+    }
+}

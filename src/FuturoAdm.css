@@ -1,0 +1,309 @@
+/* pagina.css */
+
+/* #region CSS Padrão */
+
+/* Estilos específicos para a seção de Solicitações de Eventos */
+.upcoming-events-section {
+    background-color: #ffffff;
+    width: 100%;
+    overflow-y: auto;
+    /* Para permitir rolagem caso o conteúdo ultrapasse a altura da tela */
+    padding: 2%;
+}
+
+#upcoming-events-title h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.event-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 2px solid #33BBED
+}
+
+.event-card-title {
+    font-size: 1.8rem;
+    color: #91b81e;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+
+.event-card-info-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+.event-card-description {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    margin-top: 30px;
+    margin-right: 10px;
+    overflow-wrap: break-word;
+}
+
+.event-card-buttons {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+}
+
+.event-card-button {
+    all: unset;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.reject {
+    background-color: #d86d6d;
+    border: 1px solid #ffffff;
+    color: #f1f1f1;
+    cursor: pointer;
+}
+
+
+.accept {
+    background-color: #f1f0f0;
+    border: 1px solid #33BBED;
+    color: #33BBED;
+    cursor: pointer;
+}
+
+.event-card-button:hover {
+    opacity: 0.9;
+}
+
+.reject:hover {
+    background-color: #ac4242;
+}
+
+.accept:hover {
+    background-color: #dadada;
+}
+
+.cancel {
+    background-color: #f1f0f0;
+    border: 1px solid #33BBED;
+    color: #33BBED;
+    cursor: pointer;
+}
+
+.cancel:hover {
+    background-color: #dadada;
+}
+
+.excluir {
+    background-color: #d86d6d;
+    border: 1px solid #ffffff;
+    color: #f1f1f1;
+    cursor: pointer;
+}
+
+.excluir:hover {
+    background-color: #ac4242;
+}
+
+/* #endregion */
+
+
+
+/* #region Modal Form CSS */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80%;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+}
+
+#modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.modal-message {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.modal-overlay.show {
+    display: flex;
+}
+
+/* #region Form Editar CSS */
+/* Estilo do container do formulário */
+#edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Estilo do título */
+#edit-form h2#modal-title {
+    font-size: 24px;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo dos rótulos */
+
+
+/* Estilo dos inputs */
+#edit-form input[type="text"],
+#edit-form input[type="date"],
+#edit-form input[type="time"],
+#edit-form input[type="number"],
+#edit-form textarea,
+#edit-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333333;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Efeito hover e focus nos inputs */
+#edit-form input:focus,
+#edit-form textarea:focus,
+#edit-form select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Estilo para textarea */
+#edit-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Estilo do botão */
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.modal-buttons .button {
+    all: unset;
+    padding: 10px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.modal-buttons .button.cancel {
+    background-color: #f1f0f0;
+    border: 1px solid #33BBED;
+    color: #33BBED;
+    cursor: pointer;
+}
+
+.modal-buttons .button.cancel:hover {
+    background-color: #dadada;
+}
+
+.modal-buttons .button.confirm {
+    background-color: #33BBED;
+    border: 2px solid #f1f1f1;
+    cursor: pointer;
+}
+
+.modal-buttons .button.confirm:hover {
+    background-color: #1d93be;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    #edit-form {
+        padding: 15px;
+    }
+
+    .modal-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .modal-buttons .button {
+        width: 100%;
+    }
+    .modal-buttons .button {
+        padding: 2px 2px;
+    }
+}
+
+
+
+/* #endregion */
+
+@media screen and (max-width: 480px) {
+    body{
+        font-size: 15px;
+    }
+    .event-card-button{
+        font-size: 15px;
+    }
+}
+
+
+/* #endregion */

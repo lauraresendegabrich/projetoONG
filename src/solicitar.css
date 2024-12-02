@@ -1,0 +1,1143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,500&family=Sora&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+html, body {
+    
+    margin: 0;
+    padding: 0;
+    
+    
+}
+
+
+
+#flex {
+    display: flex;
+     /* Faz com que o contêiner flex ocupe 100% da altura da viewport */
+}
+
+aside {
+    width: 25%;
+     /* Adiciona uma borda ao aside */
+    box-sizing: border-box; /* Inclui a borda na largura total do elemento */
+    margin: 0; /* Remove margens */
+    padding: 0; /* Remove espaçamentos internos */
+    
+}
+
+main {
+    width: 75%;
+     /* Adiciona uma borda ao main */
+    box-sizing: border-box; /* Inclui a borda na largura total do elemento */
+    margin: 0; /* Remove margens */
+    padding: 0; /* Remove espaçamentos internos */
+    
+    background-color: #f3f3f3;
+}
+
+
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: #f3f3f3;
+    display: flex;
+    min-height: 100vh;
+    
+}
+
+
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f3f3f3;
+    padding: 3rem;
+    
+}
+
+.sair {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.sair i {
+    font-size: 30px;
+    color: #282828;
+    background: none;
+}
+
+
+i{
+    text-align: center;
+    font-size: 35px;
+    color: #33BBED;
+    background-color: white;
+    height: 45px;
+    width: 45px;
+    padding: 5px;
+    border-radius: 100px;
+}
+
+
+div img{
+    width: 100%;
+    margin-top: 10px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+
+
+
+
+.form-header {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+.form-header h1{
+    font-family: 'Sora', sans-serif;
+}
+
+
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 6.5rem;
+    height: 0.3rem;
+    background-color:#33BBED;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+    
+}
+
+
+
+
+
+
+#user_infor {
+    width: 80%;
+    background-color: #F3F3F3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+i{
+    text-align: center;
+    font-size: 35px;
+    color: #33BBED;
+    background-color: white;
+    height: 45px;
+    width: 45px;
+    padding: 5px;
+    border-radius: 100px;
+}
+
+
+#user_perfil{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#user_perfil h1 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #282828;
+    
+}
+
+
+
+#functions li {
+    list-style: none;
+}
+
+#functions li a{
+    text-decoration: none;
+    color: #7A7A7A;
+}
+
+#functions {
+    padding: 20px; /* Espaçamento interno da seção */
+    
+}
+
+.main-container {
+    display: block; /* Alinha todos os itens em bloco, um abaixo do outro */
+}
+
+.item {
+    display: flex; /* Permite alinhar a imagem e o texto lado a lado */
+    align-items: center; /* Alinha a imagem e o texto verticalmente */
+    margin: 10px 0; /* Margem vertical entre os itens */
+    text-align: left; /* Alinha o texto à esquerda */
+    padding: 10px; /* Adiciona um pouco de padding ao redor de cada item */
+    
+    
+}
+
+.item-content {
+    display: flex; /* Alinha a imagem e o texto lado a lado */
+    align-items: center; /* Alinha verticalmente */
+}
+
+#user_photo {
+    margin-right: 15px; /* Espaço entre a imagem e o nome */
+    width: 50px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: 50px; /* Ajuste o tamanho da imagem conforme necessário */
+}
+
+.item img {
+    margin-right: 10px; /* Espaço entre a imagem e o texto */
+    width: 30px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: 30px; /* Ajuste o tamanho da imagem conforme necessário */
+}
+
+h1 {
+    font-size: 24px; /* Tamanho da fonte do nome */
+    margin: 0; /* Remove a margem padrão do h1 */
+}
+
+.item h1{
+    padding-top: 15px;
+    font-size: 19px; /* Tamanho da fonte do nome */
+    margin: 0; /* Remove a margem padrão do h1 */
+    color: black;
+}
+
+
+
+.item h3{
+    
+    color: #7a7a7a;
+    font-family: 'Sora', sans-serif;
+    font-weight: 500;
+    padding-top: 15px;
+   
+}
+
+
+
+#logo {
+    content: url('img/Logo (1).png');
+    width: 230px;
+    height: auto;
+    display: block;
+    margin: 20px auto 0; /* Centraliza a imagem horizontalmente e adiciona margem superior */
+}
+
+
+#negrito{
+   
+font-family: Sora;
+font-weight: 600;
+}
+
+
+#infoPerfil h3{
+    color: #7a7a7a;
+    font-weight: lighter;
+    font-family: 'Sora', sans-serif;
+    padding-bottom: 60px;
+    
+}
+
+
+
+footer{
+     background-color: #33BBED;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     padding-left: 18px;
+     
+}
+
+
+footer h3{
+    font-size: smaller;
+    font-family: 'Inter', sans-serif;
+    font-weight: normal;
+    color: white;
+    
+}
+
+
+#userfoto{
+    width: 130px;
+    margin-top: -40px;
+    margin-bottom: 30px;
+}
+
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Adiciona espaçamento entre os elementos dentro do grupo */
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea{
+    width: 100%;
+    padding: 10px;
+    padding-left: 15px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    resize: vertical; /* Permite o redimensionamento vertical do textarea */
+
+    
+}
+
+
+
+.half-width {
+    width: 48%;
+}
+
+/* Garantir que os campos de date e time também sigam a mesma largura */
+input[type="date"], input[type="time"] {
+    width: 100%; /* Garante que o input de date e time ocupe 100% da largura disponível dentro do container */
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 40px;
+    flex-wrap: nowrap; /* Não permite que os botões quebrem para a linha de baixo */
+}
+
+.buttons button {
+    flex-grow: 1; /* Faz os botões crescerem igualmente */
+    max-width: 120px; /* Limita a largura máxima dos botões */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #33BBED;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilos para os botões */
+.submit-btn {
+    background-color: #33BBED;
+    color: white;
+}
+
+.cancel-btn {
+    color: #33BBED;
+    background-color: transparent;
+}
+
+.cancel-btn:hover {
+    background-color: #33BBED;
+    color: #fff;
+}
+
+.submit-btn:hover {
+    transform: scale(1.05);
+}
+
+
+.form .images {
+    display: flex;
+    justify-content: space-around; /* Alinha as imagens no centro */
+    margin-top: 50px; /* Espaço acima das imagens */
+    flex-wrap: wrap; /* Permite que as imagens se movam para baixo quando o espaço não for suficiente */
+}
+
+.form .images img {
+    width: 250px; /* Define uma largura para as imagens */
+    height: auto; /* Ajusta a altura proporcionalmente */
+    object-fit: contain; /* Evita cortar a imagem */
+    border-radius: 8px; /* Cantos arredondados, opcional */
+}
+
+.form-group input::placeholder{
+    color: #CBCBCB;
+}
+
+
+.form-group textarea::placeholder{
+    color: #CBCBCB;
+}
+
+
+
+
+
+
+input[type="date" i] {
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    padding: 10px;
+    padding-left: 15px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    resize: vertical; /* Permite o redimensionamento vertical do textarea */
+    
+}
+
+input[type="date" i].half-width::placeholder {
+    color: #CBCBCB;
+    
+}
+
+input[type="time" i] {
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    padding: 10px;
+    padding-left: 15px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    resize: vertical; /* Permite o redimensionamento vertical do textarea */
+    
+}
+
+
+
+
+
+
+
+
+
+input[type="date"],
+input[type="time"] {
+    appearance: none; /* Remove o estilo padrão na maioria dos navegadores */
+    -webkit-appearance: none; /* Remove o estilo padrão em navegadores WebKit */
+    -moz-appearance: textfield; /* Remove o estilo padrão no Firefox */
+    position: relative;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    background-color: #33BBED;
+    color: white;
+    border-radius: 5px;
+    
+}
+
+
+/* Efeito de hover nos inputs */
+input[type="text"]:hover,
+input[type="date"]:hover,
+input[type="time"]:hover,
+input[type="number"]:hover,
+textarea:hover {
+    border-color: #33BBED; /* Cor da borda ao passar o mouse */
+    background-color: #f0f8ff; /* Cor do fundo ao passar o mouse */
+}
+
+/* Foco nos inputs */
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #0056b3; /* Cor da borda ao focar */
+    background-color: #f0f8ff; /* Fundo com a mesma cor ao focar */
+}
+
+
+.form-description {
+    font-size: 1.2em;
+    color: #7A7A7A;
+    margin-bottom: 40px; /* Adiciona um espaçamento abaixo da frase */
+    font-weight: normal;
+    text-align: left; /* Alinha o texto ao centro */
+    font-family: 'Sora', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Ajustes para telas maiores */
+@media screen and (max-width: 1230px)  {
+    #container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        align-items: center;
+    }
+    .container, .form {
+        width: 100%;
+        
+    }
+    
+    
+    .input-box input {
+        -width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 1000px) {
+    #rodape {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 10px;
+        height: auto;
+    }
+    
+    #logo {
+        width: 80%;
+        padding: 0;
+    }
+    
+    aside#info h1{
+        font-size: 20px;
+    }
+    
+    aside #functions h3 {
+        font-size: 16px;
+    }
+
+    
+}
+
+/* Ajustes intermediários */
+@media screen and (max-width: 933px) {
+    #rodape {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 10px;
+        height: auto;
+    }
+   
+    #logo {
+        width: 80%;
+        padding: 0;
+        
+    }
+   
+    
+    aside#info h1{
+        font-size: 14px;
+        
+    }
+    
+    aside #functions h3 {
+        font-size: 1.0rem;
+        max-width: 90px; /* Ajuste a largura para forçar a quebra de linha */
+        word-wrap: break-word; /* Permite a quebra de palavra, se necessário */
+    }
+
+    #user_photo {
+        margin-right: 15px; /* Espaço entre a imagem e o nome */
+        width: 40px; /* Ajuste o tamanho da imagem conforme necessário */
+        height: 40px; /* Ajuste o tamanho da imagem conforme necessário */
+    }
+
+    .input-box input {
+        width: 100%;
+        padding: 0.9rem 1.2rem;
+        border: none;
+        border-radius: 10px;
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Ajustes para telas pequenas */
+@media screen and (max-width: 550px) {
+    #logo {
+        width: 20%;
+    }
+    .form {
+        padding-right: 1.5rem;
+        padding-left: 1rem;
+        
+    }
+    .input-group {
+        padding: 1rem 0;
+    }
+
+    .form-group {
+        flex-direction: column; /* Alinha os inputs verticalmente em telas menores */
+        gap: 15px; /* Aumenta o espaçamento entre os campos quando estiverem empilhados */
+    }
+
+    .half-width {
+        width: 100%; /* Os campos que tinham metade da largura agora ocupam 100% */
+    }
+   
+
+    #logo {
+        content: url('img/estrelacolorida.jpg'); /* Altere o caminho para a imagem desejada */
+        width: 80px; /* Ajuste o tamanho para a imagem menor */
+    }
+
+    #user_photo {
+        margin-right: 15px; /* Espaço entre a imagem e o nome */
+        width: 40px; /* Ajuste o tamanho da imagem conforme necessário */
+        height: 40px; /* Ajuste o tamanho da imagem conforme necessário */
+    }
+
+    
+    #container {
+        grid-template-columns: 1fr;
+    }
+    #texto1 {
+        padding: 20px;
+    }
+    .input-box input {
+        font-size: 0.7rem;
+       
+    }
+
+    aside#info h1, aside #functions h3 {
+        display: none;
+    }
+
+    .form .images {
+        justify-content: center; /* Alinha as imagens ao centro quando empilhadas */
+    }
+
+    .form .images img {
+        width: 100%; /* As imagens ocupam toda a largura disponível */
+        margin-bottom: 15px; /* Espaço entre as imagens empilhadas */
+    }
+    
+}
+
+@media screen and (max-width: 545px) and (height: 720px){
+    #logo {
+        width: 20%;
+    }
+    
+    .form {
+        padding-right: 1.5rem;
+        padding-left: 1rem;
+        
+    }
+    .input-group {
+        padding: 1rem 0;
+    }
+    .input-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 1.1rem;
+        padding-right: 10px;
+        padding-left: 10px;
+        
+
+        
+    }
+    .input-box input {
+        width: 100%;
+        padding: 0.9rem 1.2rem;
+        margin: 0.6rem 0;
+        font-size: 0.8rem;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 1px 1px 6px #0000001c;
+    }
+
+    #logo {
+        content: url('img/estrelacolorida.jpg'); /* Altere o caminho para a imagem desejada */
+        width: 80px; /* Ajuste o tamanho para a imagem menor */
+    }
+
+    #user_photo {
+        margin-right: 15px; /* Espaço entre a imagem e o nome */
+        width: 40px; /* Ajuste o tamanho da imagem conforme necessário */
+        height: 40px; /* Ajuste o tamanho da imagem conforme necessário */
+    }
+
+    
+    #container {
+        grid-template-columns: 1fr;
+    }
+    #texto1 {
+        padding: 20px;
+    }
+    .input-box input {
+        font-size: 0.7rem;
+       
+    }
+
+    .btn {
+        padding: 8px 15px; /* Preenchimento do botão */
+        font-size: 14px; /* Tamanho da fonte */
+        font-weight: bold; /* Fonte em negrito */
+        color: #00A6E7; /* Cor do texto */
+        background-color: transparent; /* Fundo transparente */
+        border: 1px solid #00A6E7; /* Borda azul */
+        border-radius: 8px; /* Bordas arredondadas */
+        cursor: pointer; /* Muda o cursor ao passar o mouse */
+        text-transform: uppercase; /* Texto em maiúsculas */
+        transition: background-color 0.3s ease, color 0.3s ease; /* Transições suaves */
+    }
+
+    aside#info h1, aside #functions h3 {
+        display: none;
+    }
+    
+
+    aside#info {
+        
+        display: flex;
+        flex-direction: column; /* Coloca os elementos um abaixo do outro */
+        padding: 20px; /* Espaçamento interno para melhorar a aparência */
+    }
+    
+    aside#info img {
+        margin-bottom: 10px; /* Espaço entre as imagens (ajuste conforme necessário) */
+        max-width: 100%; /* Ajusta o tamanho da imagem para que ela não exceda a largura do container */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Ajuste adicional para o campo de texto */
+@media screen and (max-width: 500px) {
+
+    #logo {
+        content: url('img/estrelacolorida.jpg'); /* Altere o caminho para a imagem desejada */
+        width: 80px; /* Ajuste o tamanho para a imagem menor */
+    }
+
+    #user_photo {
+        margin-right: 15px; /* Espaço entre a imagem e o nome */
+        width: 40px; /* Ajuste o tamanho da imagem conforme necessário */
+        height: 40px; /* Ajuste o tamanho da imagem conforme necessário */
+    }
+
+    
+    #container {
+        grid-template-columns: 1fr;
+    }
+    #texto1 {
+        padding: 20px;
+    }
+    .input-box input {
+        font-size: 0.7rem;
+       
+    }
+
+    .btn {
+        padding: 8px 15px; /* Preenchimento do botão */
+        font-size: 14px; /* Tamanho da fonte */
+        font-weight: bold; /* Fonte em negrito */
+        color: #00A6E7; /* Cor do texto */
+        background-color: transparent; /* Fundo transparente */
+        border: 1px solid #00A6E7; /* Borda azul */
+        border-radius: 8px; /* Bordas arredondadas */
+        cursor: pointer; /* Muda o cursor ao passar o mouse */
+        text-transform: uppercase; /* Texto em maiúsculas */
+        transition: background-color 0.3s ease, color 0.3s ease; /* Transições suaves */
+    }
+
+    aside#info h1, aside #functions h3 {
+        display: none;
+    }
+
+   
+
+   
+}
+
+/* Ajuste adicional para o campo de texto */
+@media screen and (max-width: 400px) {
+
+    
+    #logo {
+        content: url('img/estrelacolorida.jpg'); /* Altere o caminho para a imagem desejada */
+        width: 70px; /* Ajuste o tamanho para a imagem menor */
+    }
+
+    #user_photo {
+        margin-right: 15px; /* Espaço entre a imagem e o nome */
+        width: 40px; /* Ajuste o tamanho da imagem conforme necessário */
+        height: 40px; /* Ajuste o tamanho da imagem conforme necessário */
+    }
+
+    #container {
+        grid-template-columns: 1fr;
+    }
+    #texto1 {
+        padding: 20px;
+    }
+    .input-box input {
+        font-size: 0.7rem;
+       
+    }
+
+    .btn {
+        padding: 8px 15px; /* Preenchimento do botão */
+        font-size: 14px; /* Tamanho da fonte */
+        font-weight: bold; /* Fonte em negrito */
+        color: #00A6E7; /* Cor do texto */
+        background-color: transparent; /* Fundo transparente */
+        border: 1px solid #00A6E7; /* Borda azul */
+        border-radius: 8px; /* Bordas arredondadas */
+        cursor: pointer; /* Muda o cursor ao passar o mouse */
+        text-transform: uppercase; /* Texto em maiúsculas */
+        transition: background-color 0.3s ease, color 0.3s ease; /* Transições suaves */
+    }
+
+    aside#info h1, aside #functions h3 {
+        display: none;
+    }
+    footer h3{
+        font-size: 12px;
+    }
+    
+    #userfoto{
+        width: 120px;
+        margin-top: -40px;
+        margin-bottom: 30px;
+    }
+
+
+
+
+    
+   
+}
+
+@media screen and (max-width: 667px) and (height:375px){
+
+    #logo {
+        width: 80%;
+    }
+
+    #user_photo {
+        margin-right: 15px; /* Espaço entre a imagem e o nome */
+        width: 40px; /* Ajuste o tamanho da imagem conforme necessário */
+        height: 40px; /* Ajuste o tamanho da imagem conforme necessário */
+    }
+
+    
+    #container {
+        grid-template-columns: 1fr;
+    }
+    #texto1 {
+        padding: 20px;
+    }
+    .input-box input {
+        font-size: 0.7rem;
+       
+    }
+
+    .btn {
+        padding: 8px 15px; /* Preenchimento do botão */
+        font-size: 14px; /* Tamanho da fonte */
+        font-weight: bold; /* Fonte em negrito */
+        color: #00A6E7; /* Cor do texto */
+        background-color: transparent; /* Fundo transparente */
+        border: 1px solid #00A6E7; /* Borda azul */
+        border-radius: 8px; /* Bordas arredondadas */
+        cursor: pointer; /* Muda o cursor ao passar o mouse */
+        text-transform: uppercase; /* Texto em maiúsculas */
+        transition: background-color 0.3s ease, color 0.3s ease; /* Transições suaves */
+    }
+
+    aside#info h1{
+        font-size: 14px;
+        
+    }
+    
+    aside #functions h3 {
+        font-size: 0.9rem;
+        max-width: 90px; /* Ajuste a largura para forçar a quebra de linha */
+        word-wrap: break-word; /* Permite a quebra de palavra, se necessário */
+    }
+
+    footer h3{
+        font-size: 11px;
+    }
+    
+   
+}
+
+@media screen and (max-width: 344px) {
+
+
+    
+    #logo {
+        content: url('img/estrelacolorida.jpg'); /* Altere o caminho para a imagem desejada */
+        width: 70px; /* Ajuste o tamanho para a imagem menor */
+        margin-left: -20px;
+    }
+
+    #user_photo {
+        margin-right: 15px; /* Espaço entre a imagem e o nome */
+        width: 40px; /* Ajuste o tamanho da imagem conforme necessário */
+        height: 40px; /* Ajuste o tamanho da imagem conforme necessário */
+    }
+
+    #container {
+        grid-template-columns: 1fr;
+    }
+    #texto1 {
+        padding: 20px;
+    }
+    .input-box input {
+        font-size: 0.7rem;
+       
+    }
+
+
+    aside#info h1, aside #functions h3 {
+        display: none;
+    }
+
+    footer h3{
+        font-size: 11px;
+    }
+    
+
+   
+}
+
+@media screen and (max-width: 390px) {
+
+
+    
+    #logo {
+        content: url('img/estrelacolorida.jpg'); /* Altere o caminho para a imagem desejada */
+        width: 70px; /* Ajuste o tamanho para a imagem menor */
+        margin-left: 10px;
+    }
+
+    #user_photo {
+        margin-right: 15px; /* Espaço entre a imagem e o nome */
+        width: 40px; /* Ajuste o tamanho da imagem conforme necessário */
+        height: 40px; /* Ajuste o tamanho da imagem conforme necessário */
+    }
+
+    #container {
+        grid-template-columns: 1fr;
+    }
+    #texto1 {
+        padding: 20px;
+    }
+    .input-box input {
+        font-size: 0.7rem;
+        
+       
+    }
+
+    aside#info h1, aside #functions h3 {
+        display: none;
+    }
+
+    footer h3{
+        font-size: 11px;
+    }
+    
+
+   
+}
+
+
+@media screen and (max-width: 989px) {
+
+    
+   
+}
+
+@media screen and (max-width: 682px) {
+
+
+    #user_photo {
+        margin-right: 15px; /* Espaço entre a imagem e o nome */
+        width: 40px; /* Ajuste o tamanho da imagem conforme necessário */
+        height: 40px; /* Ajuste o tamanho da imagem conforme necessário */
+    }
+
+    #container {
+        grid-template-columns: 1fr;
+    }
+    #texto1 {
+        padding: 20px;
+    }
+    .input-box input {
+        font-size: 0.7rem;
+        
+       
+    }
+
+
+    aside#info h1, aside #functions h3 {
+        font-size: 11px ;
+    }
+
+    footer h3{
+        font-size: 11px;
+    }
+   
+   
+}
+
+@media screen and (max-width: 793px) {
+
+
+    .form .images {
+        justify-content: center; /* Alinha as imagens ao centro quando empilhadas */
+    }
+
+    .form .images img:nth-child(2) {
+        display: none; /* A segunda imagem desaparece quando a tela for menor que 768px */
+    }
+
+    .form .images img {
+        width: 100%; /* As imagens ocupam toda a largura disponível */
+        margin-bottom: 15px; /* Espaço entre as imagens empilhadas */
+    }
+   
+}
+
+@media screen and (max-width: 290px) {
+
+
+    
+    #logo {
+        content: url('img/estrelacolorida.jpg'); /* Altere o caminho para a imagem desejada */
+        width: 60px; /* Ajuste o tamanho para a imagem menor */
+        margin-left: 5px;
+    }
+
+    #user_photo {
+        margin-right: 15px; /* Espaço entre a imagem e o nome */
+        width: 40px; /* Ajuste o tamanho da imagem conforme necessário */
+        height: 40px; /* Ajuste o tamanho da imagem conforme necessário */
+    }
+
+    #container {
+        grid-template-columns: 1fr;
+    }
+    #texto1 {
+        padding: 20px;
+    }
+    .input-box input {
+        font-size: 0.7rem;
+       
+    }
+
+    .buttons button {
+        flex-grow: 1; /* Faz os botões crescerem igualmente */
+        
+        padding: 10px 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 12px;
+        font-weight: bold;
+        border: 1px solid #33BBED;
+        border-radius: 8px;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+
+    aside#info h1, aside #functions h3 {
+        display: none;
+    }
+
+    footer h3{
+        font-size: 11px;
+    }
+    #functions {
+        padding: 10px;
+    }
+
+   
+}

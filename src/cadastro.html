@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="img/estrelacolorida.jpg" type="image/x-icon">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header>
+        <div id="img-logo">
+            <a href="paginainicial.html"><img src="imgensLogin/estrelaBranca.png" alt="logotipo" class="logotipo"></a>
+        </div>
+        <input type="checkbox" id="nav_check" hidden>
+        <nav>
+            <div class="logo">
+                <div class="logo2">
+                </div>
+            </div>
+            <ul>
+                <li><a class="a-nav" href="paginainicial.html">INÍCIO</a></li>
+                <li><a class="a-nav" href="paginainicial.html#quem-pode">SOBRE NÓS</a></li>
+                <li><a class="a-nav" href="paginainicial.html#quem-somos">COMO AJUDAR?</a></li>
+                <li><a class="a-nav" href="paginainicial.html#workshops-container">EVENTOS</a></li>
+                <li><a class="a-nav" href="paginainicial.html#parceiros">PARCEIROS</a></li>
+            </ul>
+        </nav>
+        <label for="nav_check" class="hamburguer">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
+    <main>
+        <section id="login">
+            <section class="background">
+                <div class="login-aside">
+                    <h1>Cadastre-se</h1>
+                    <p>Insira as suas informações para fazermos o seu cadastro</p>
+                   
+                    <section id="input-login">
+
+                        <div class="name-container">
+                            <div class="nome-wrapper">
+                                <input id="nome" type="text" placeholder="Nome">
+                                <button type="button" id="toggleNome" aria-label="Mostrar nome">📝</button>
+                            </div>
+                    
+                            <div class="sobrenome-wrapper">
+                                <input id="sobrenome" type="text" placeholder="Sobrenome">
+                                <button type="button" id="toggleSobrenome" aria-label="Mostrar sobrenome">📝</button>
+                            </div>
+                        </div>
+
+                        <div class="telefone-wrapper">
+                            <input id="telefone" type="tel" placeholder="Telefone" autocomplete="tel" pattern="^\(d{2}\)\d{4,5}-\d{4}$">
+                            <button type="button" id="toggleTelefone" aria-label="Mostrar telefone">
+                                📱
+                            </button>
+                        </div>
+
+                        <div class="email-wrapper">
+                            <input id="email" type="email" placeholder="Digite o seu e-mail" autocomplete="email">
+                            <button type="button" id="toggleEmail" aria-label="Mostrar email">
+                                📧
+                            </button>
+                        </div>
+                        
+                        <div class="passwords-container">
+                            <div class="password-wrapper">
+                                <input id="password" type="password" placeholder="Digite a sua senha">
+                                <button type="button" id="togglePassword" aria-label="Mostrar senha">🔓</button>
+                            </div>
+                            
+                            <div class="passwordConfirme-wrapper">
+                                <input id="passwordConfirme" type="password" placeholder="Confirme sua senha">
+                                <button type="button" id="togglePasswordConfirme" aria-label="Mostrar senha">🔓</button>
+                            </div>
+                        </div>
+                    </section>
+                    <button id="button">
+                        <span id="loadingIcon" style="display:none;">🔄</span>
+                        Cadastrar
+                    </button>
+                    
+                </div>
+                <div class="login-img">
+                </div>
+            </section>
+        </section>
+    </main>
+    
+</body>
+<script src="cadastro.js"></script>
+
+</html>

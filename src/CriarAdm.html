@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrador</title>
+    <link rel="stylesheet" href="CabecalhoAdm.css">
+    <link rel="stylesheet" href="CriarAdm.css">
+    <link href='https://fonts.googleapis.com/css?family=Sora' rel='stylesheet'>
+    <script src="/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <img src="./logos/logopaginaprincipal3.png" alt="Logo da Empresa">
+        <div class="title-container">
+            <h1>Painel de Administrador</h1>
+        </div>
+
+        <div class="container-options">
+            <button class="btn-main">☰ Opções</button>
+            <div class="options">
+                <a href="#">Adicionar Evento</a>
+                <a href="SolicitacaoAdm.html">Solicitações de Eventos</a>
+                <a href="FuturoAdm.html">Eventos Futuros</a>
+                <a href="RelatorioAdm.html">Relatório de Eventos</a>
+            </div>
+            <button id="sair" href="#" onclick="logout(event)">Sair</button>
+        </div>
+
+        <div class="menu">
+            <a href="#">
+                <i class="fas fa-calendar-plus"></i>
+                Criar Evento</a>
+            <a href="SolicitacaoAdm.html">
+                <i class="fas fa-envelope-open-text"></i> Solicitações de Eventos</a>
+            <a href="FuturoAdm.html">
+                <i class="fas fa-calendar-alt"></i> Eventos Futuros</a>
+            <a href="RelatorioAdm.html">
+                <i class="fas fa-chart-bar"></i>
+                Relatório de Eventos</a>
+            <a id="sair" href="#" onclick="logout(event)">
+                <i class="fas fa-sign-out-alt"></i> Sair
+            </a>
+
+        </div>
+    </header>
+
+
+    <section class="create-events-section" id="event-request-section">
+        <div class="event-cards-container" id="event-cards-container">
+            <form id="create-form">
+                <h2 id="modal-title"><i class="fas fa-calendar-plus"></i> Criar Evento</h2>
+
+                <!-- Campos ocultos para ID e confirmação -->
+                <input type="hidden" name="event_ID" id="event_ID" value="" />
+                <input type="hidden" name="confirmation" id="confirmation" value="" />
+
+                <!-- Nome do Evento -->
+                <label for="event_name">🎈Nome do Evento:</label>
+                <input type="text" name="event_name" id="event_name" required />
+
+                <!-- Descrição -->
+                <label for="event_description">📝Descrição:</label>
+                <textarea name="event_description" id="event_description" required></textarea>
+
+                <!-- Data -->
+                <label for="event_date">🗓️Data:</label>
+                <input type="date" name="event_date" id="event_date" required />
+
+                <!-- Horário -->
+                <label for="event_time">🕒Horário:</label>
+                <input type="time" name="event_time" id="event_time" required />
+
+                <!-- Número de Vagas -->
+                <label for="event_slots">🧑‍🤝‍🧑Número de Vagas:</label>
+                <input type="number" name="event_slots" id="event_slots" required />
+
+                <!-- Local -->
+                <label for="event_location">📍Local:</label>
+                <input type="text" name="event_location" id="event_location" required />
+
+                <!-- Duração -->
+                <label for="event_duration">⏳Duração:</label>
+                <input type="time" name="event_duration" id="event_duration" required />
+
+                <!-- Nome do Responsável -->
+                <label for="event_responsible">🙋Nome do Responsável:</label>
+                <input type="text" name="event_responsible" id="event_responsible" required />
+
+                <!-- Botões -->
+                <div class="modal-buttons">
+                    <button type="submit" id="openModalBtn" class="button confirm">Criar Evento</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <div class="confirmation">
+        <div class="modal-overlay" id="modal-create">
+            <div class="modal-content">
+                <h2 class="modal-title" id="modal-title">Confirmar Criação de Evento</h2>
+                <input type="hidden" name="event_id" id="event_id" value="" />
+                <input type="hidden" name="confirm" id="confirm" value="" />
+                <div class="modal-buttons confirm">
+                    <button type="button" id="cancelBtn" class="button confirm cancel">Cancelar</button>
+                    <button type="button" id="confirmBtn" class="button confirm create">Criar Evento</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="CriarAdm.js"></script>
+    <script src="CabecalhoAdm.js"></script>
+</body>
+
+</html>

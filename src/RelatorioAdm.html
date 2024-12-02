@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrador</title>
+    <link rel="stylesheet" href="CabecalhoAdm.css">
+    <link rel="stylesheet" href="RelatorioAdm.css">
+    <link href='https://fonts.googleapis.com/css?family=Sora' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <img src="./logos/logopaginaprincipal3.png" alt="Logo da Empresa">
+        <div class="title-container">
+            <h1>Painel de Administrador</h1>
+        </div>
+
+        <div class="container-options">
+            <button class="btn-main">☰ Opções</button>
+            <div class="options">
+                <a href="CriarAdm.html">Adicionar Evento</a>
+                <a href="SolicitacaoAdm.html">Solicitações de Eventos</a>
+                <a href="FuturoAdm.html">Eventos Futuros</a>
+                <a href="#">Relatório de Eventos</a>
+            </div>
+            <button id="sair" href="#" onclick="logout(event)">Sair</button>
+        </div>
+
+        <div class="menu">
+            <a href="CriarAdm.html">
+                <i class="fas fa-calendar-plus"></i>
+                Criar Evento</a>
+            <a href="SolicitacaoAdm.html">
+                <i class="fas fa-envelope-open-text"></i> Solicitações de Eventos</a>
+            <a href="FuturoAdm.html">
+                <i class="fas fa-calendar-alt"></i> Eventos Futuros</a>
+            <a href="#">
+                <i class="fas fa-chart-bar"></i>
+                Relatório de Eventos</a>
+            <a id="sair" href="#" onclick="logout(event)">
+                <i class="fas fa-sign-out-alt"></i> Sair
+            </a>
+        </div>
+    </header>
+
+
+    <div class="horizontal-section">
+        <section class="event-report-section" id="event-report-section">
+            <div class="section-title" id="event-report-title">
+                <h2><i class="fas fa-chart-bar"></i> Relatório de Eventos</h2>
+            </div>
+            <form id="filter-form">
+                <div class="select-container">
+                    <select name="opcao" class="event-card-button option">
+                        <option value="" selected>Todos Eventos</option>
+                        <option value="aprovado">Aprovados</option>
+                        <option value="reprovado">Reprovados</option>
+                        <option value="em analise">Em Análise</option>
+                    </select>
+                    <input type="date" name="dataOpcao" class="event-card-button date" />
+                    <button type="submit" class="event-card-button filter">Filtrar</button>
+                </div>
+            </form>
+            <div class="event-cards-container" id="event-cards-container">
+                <div class="event-card" id="event-report-card">
+                    <div class="event-card-content">
+                        <h3 class="event-card-title">🎈 </h3>
+                        <div class="event-card-info-container">
+                            <div class="event-card-info-column">
+                                <p><strong>Sem Eventos</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-card-buttons">
+                        <form>
+                            <button class="event-card-button info" name="info" value="info"
+                                onclick="showModal(event,)">Detalhes</button>
+                        </form>
+                        <input type="hidden" name="id_event" value="{{ID_Evento}}" />
+                        <button class="event-card-button participant" name="participant" value="view"
+                            onclick="fetchParticipants()">Participantes</button>
+                        <form>
+                            <button class="event-card-button info" name="info" value="info"
+                                onclick="showModal(event, this.value)">Detalhes</button>
+                        </form>
+                        <form>
+                            <a class=" event-card-button reject" name="reject" value="reject">Reprovado</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="modal-infos">
+            <div class="modal-overlay" id="modal">
+                <div class="modal-content">
+                    <form>
+                        <h2 class="modal-title" id="modal-title"><strong>SFDUINSDFSD</strong></h2>
+                        <p><strong>Status:</strong> <span id="event_status"></span></p>
+                        <input type="hidden" id="event_id" name="event_id" value="" />
+                        <p><strong>Data:</strong> <span id="event_date"></span></p>
+                        <p><strong>Horário:</strong> <span id="event_time"></span></p>
+                        <p><strong>Local:</strong> <span id="event_location"></span></p>
+                        <p><strong>Duração:</strong> <span id="event_duration"></span></p>
+                        <p><strong>Vagas Disponíveis:</strong> <span id="event_slots"></span></p>
+                        <p><strong>Responsável:</strong> <span id="event_responsible"></span></p>
+                        <p><strong>Descrição:</strong> <span id="event_description"></span></p>
+                    </form>
+
+                    <button type="button" onclick="closeModal('modal')" class="event-card-button close">Fechar</button>
+                </div>
+            </div>
+            <div class="modal-participants">
+                <div class="modal-overlay" id="modal-participant">
+                    <div class="modal-content">
+                        <h2 class="modal-title" id="modal-title"><strong>Participantes</strong></h2>
+                        <ul id="participantList"></ul>
+                        <button class="event-card-button close"
+                            onclick="closeModal('modal-participant')">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="RelatorioAdm.js"></script>
+        <script src="CabecalhoAdm.js"></script>
+</body>
+
+</html>

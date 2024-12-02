@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="perfil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="img/estrelacolorida.jpg" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <div id="flex">
+        <aside id="info">
+            <a href="paginainicial.html"><img src="img/Logo (1).png" id="logo"></a>
+
+            <section id="functions">
+                <div class="main-container">
+                    <div class="item user-info">
+                        <img src="img/imagem-do-usuario-com-fundo-preto.png" id="user_photo">
+                        <h1 id="nome_usuario">Nome do Usuário</h1>
+                    </div>
+                    <a href="perfil.html">
+                        <div class="item">
+                            <img src="img/perfil_fechado.png" alt="Imagem 1">
+                            <h3 id="negrito">Perfil</h3>
+                        </div>
+                    </a>
+                    <a href="solicitarEvento.html">
+                        <div class="item">
+                            <img src="img/solicitar (1).png" alt="Imagem 2">
+                            <h3>Solicitar evento</h3>
+                        </div>
+                    </a>
+                    <a href="status.html">
+                        <div class="item">
+                            <img src="img/status-do-projeto (1).png" alt="Imagem 3">
+                            <h3>Status de solicitação</h3>
+                        </div>
+                    </a>
+                    <a href="paginainicial.html">
+                        <div class="item" id="sair">
+                            <img src="img/sair.png" alt="Imagem 5">
+                            <h3>Sair</h3>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+        </aside>
+        <main>
+
+            <div class="container">
+                <div class="form">
+                    <form action="#">
+                        <div class="form-header">
+                            <div class="sair">
+                                <a href="paginainicial.html">
+                                    <i class="fa-solid fa-arrow-left"></i>
+                                </a>
+                                
+                                <h1>Perfil</h1>
+                            </div>
+
+                        </div>
+                        <div id="infoPerfil">
+                            <img src="img/imagem-do-usuario-com-fundo-preto.png" id="userfoto">
+                        </div>
+                        <div class="input-group">
+                            <div class="input-box">
+                                <label for="name">Nome</label>
+                                <input id="nome" type="text" name="name" readonly>
+                            </div>
+                            <div class="input-box">
+                                <label for="name">Sobrenome</label>
+                                <input id="sobrenome" type="text" name="name"  readonly>
+                            </div>
+
+                            <div class="input-box">
+                                <label for="email">Email</label>
+                                <input id="email" type="email" name="email"  readonly>
+                            </div>
+
+                            <div class="input-box">
+                                <label for="tel">Telefone</label>
+                                <input id="telefone" type="tel" name="data"  readonly>
+                            </div>
+
+                        </div>
+
+                        <div class="button-container">
+                            <button class="btn editar">EDITAR</button>
+                            <button class="btn salvar">SALVAR</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+   
+    <script src="perfil.js"></script>
+
+    <footer>
+        <h3>© 2024 ONG Solidariedade. Todos os direitos reservados.</h3>
+    </footer>
+
+</body>
+<script>
+    document.getElementById('sair').addEventListener('click', function(event) {
+        // Previne o comportamento padrão do link
+        event.preventDefault();
+
+        // Remover o token do localStorage
+        localStorage.removeItem('token'); // ou sessionStorage.removeItem('token') se for o caso
+
+        // Redirecionar para a página de login
+        window.location.href = 'paginainicial.html'; // Ou qualquer página de login
+    });
+</script>
+
+</html>
+

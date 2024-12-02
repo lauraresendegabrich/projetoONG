@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login de Administrador</title>
+    <link rel="stylesheet" href="loginAdm.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="img/estrelacolorida.jpg" type="image/x-icon">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header>
+        <div id="img-logo">
+            <a href="paginainicial.html"><img src="imgensLogin/estrelaBranca.png" alt="logotipo" class="logotipo"></a>
+        </div>
+        <input type="checkbox" id="nav_check" hidden>
+        <nav>
+            <div class="logo">
+                <div class="logo2">
+                </div>
+            </div>
+            <ul>
+                <li><a class="a-nav" href="paginainicial.html">INÍCIO</a></li>
+                <li><a class="a-nav" href="paginainicial.html#quem-pode">SOBRE NÓS</a></li>
+                <li><a class="a-nav" href="paginainicial.html#quem-somos">COMO AJUDAR?</a></li>
+                <li><a class="a-nav" href="paginainicial.html#workshops-container">EVENTOS</a></li>
+                <li><a class="a-nav" href="paginainicial.html#parceiros">PARCEIROS</a></li>
+            </ul>
+        </nav>
+        <label for="nav_check" class="hamburguer">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
+    <main>
+        <section id="login">
+            <section class="background">
+                <div class="login-aside">
+                    <h1>Login</h1>
+                    <div class="login-button">
+                        <button id="user-button"><a href="loginUsuario.html" class="login-b">LOGIN COMO <strong>USUÁRIO</strong></a></button>
+                        <button id="adm-button"><a href="loginAdm.html">LOGIN COMO <strong>ADMINISTRADOR</strong></a></button>
+                    </div>
+                   
+                    <section id="input-login">
+
+                        <div class="email-wrapper">
+                            <input id="email" type="email" placeholder="Digite o seu e-mail">
+                            <button type="button" id="toggleEmail" aria-label="Mostrar email">
+                                📧
+                            </button>
+                        </div>
+                        
+                        <div class="password-wrapper">
+                            <input id="password" type="password" placeholder="Digite a sua senha">
+                            <button type="button" id="togglePassword" aria-label="Mostrar senha">
+                                🔓
+                            </button>
+                        </div>
+                    </section>
+                    <button id="button">Entrar</button>
+                    <p>Ainda não possui uma conta? <a href="cadastro.html" id="cadastre">Cadastre-se agora</a></p>
+                </div>
+                <div class="login-img">
+                </div>
+            </section>
+        </section>
+    </main>
+    
+</body>
+<script src="loginAdm.js"></script>
+
+</html>
