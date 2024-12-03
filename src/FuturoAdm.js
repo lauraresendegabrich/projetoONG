@@ -233,7 +233,7 @@ function logout(event) {
     localStorage.removeItem('token'); // ou sessionStorage.removeItem('token') se for o caso
 
     // Redirecionar para a página de login
-    window.location.href = 'paginainicial.html'; // Ou qualquer página de login
+    window.location.href = 'index.html'; // Ou qualquer página de login
 }
 
 fetchFutureEvents();

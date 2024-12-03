@@ -15,7 +15,7 @@ async function processaFormLogin(event) {
     const resultadoLogin = await loginUser(email, password);
 
     if (resultadoLogin) {
-        window.location.href = 'paginainicial.html';  // Página do inicial do usuário com perfil
+        window.location.href = 'index.html';  // Página do inicial do usuário com perfil
     } 
 }
 
