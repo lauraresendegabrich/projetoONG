@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // URL da API
-    const apiUrl = 'http://localhost:30079/api/eventos';
+    const apiUrl = 'https://backendong-final.onrender.com/api/eventos';
 
     // Contêiner onde os cards serão inseridos
     const workshopsContainer = document.getElementById('workshops-container');
@@ -66,7 +66,7 @@ $(document).ready(function() {
         events: function(info, successCallback, failureCallback) {
             // Requisição para buscar os eventos
             $.ajax({
-                url: 'http://localhost:30079/api/eventos',
+                url: 'https://backendong-final.onrender.com/api/eventos',
                 method: 'GET',
                 success: function(data) {
                     // Mapear os dados da API para o formato que o FullCalendar espera
@@ -140,7 +140,7 @@ async function checkUserLoggedIn() {
     if (!token) return false;
 
     try {
-        const response = await fetch("http://localhost:30079/perfil", {
+        const response = await fetch("https://backendong-final.onrender.com/perfil", {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`
@@ -188,7 +188,7 @@ function inscreverEvento(eventoID) {
     const ID_Usuario = decodedToken.id; // Certifique-se de que o payload contém o campo "id"
 
     // Faz a requisição para o servidor
-    fetch(`http://localhost:30079/api/eventos/${eventoID}/inscrever`, {
+    fetch(`https://backendong-final.onrender.com/api/eventos/${eventoID}/inscrever`, {
         method: "POST",
         headers: {
             "Authorization": `Bearer ${token}`, // Token para autenticação
