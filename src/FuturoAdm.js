@@ -9,7 +9,7 @@ async function fetchFutureEvents() {
             return;
         }
 
-        const response = await fetch('http://localhost:30079/api/eventos/eventos-futuros', {
+        const response = await fetch('https://backendong-final.onrender.com/api/eventos/eventos-futuros', {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -128,7 +128,7 @@ document.getElementById('edit-form').addEventListener('submit', async function (
             return;
         }
         // Enviar os dados para a rota do backend
-        const response = await fetch('http://localhost:30079/api/editData', {
+        const response = await fetch('https://backendong-final.onrender.com/api/editData', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -187,7 +187,7 @@ async function confirmEvent() {
             window.location.href = 'loginUsuario.html';
             return;
         }
-        const response = await fetch('http://localhost:30079/api/deleteEvent', {
+        const response = await fetch('https://backendong-final.onrender.com/api/deleteEvent', {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

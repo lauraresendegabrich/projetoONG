@@ -10,7 +10,7 @@ async function fetchEventRequests() {
             return;
         }
 
-        const response = await fetch('http://localhost:30079/api/eventos/em-analise', {
+        const response = await fetch('https://backendong-final.onrender.com/api/eventos/em-analise', {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -100,7 +100,7 @@ async function confirmEvent() {
             return;
         }
 
-        const response = await fetch('http://localhost:30079/api/updateEventStatus', {
+        const response = await fetch('https://backendong-final.onrender.com/api/updateEventStatus', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -146,7 +146,7 @@ function logout(event) {
     localStorage.removeItem('token'); // ou sessionStorage.removeItem('token') se for o caso
 
     // Redirecionar para a página de login
-    window.location.href = 'paginainicial.html'; // Ou qualquer página de login
+    window.location.href = 'index.html'; // Ou qualquer página de login
 }
 
 

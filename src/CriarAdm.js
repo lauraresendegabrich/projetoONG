@@ -48,7 +48,7 @@ document.getElementById('create-form').addEventListener('submit', async function
                 return;
             }
             // Enviar os dados para a rota do backend
-            const response = await fetch('http://localhost:30079/api/createEvent', {
+            const response = await fetch('https://backendong-final.onrender.com/api/createEvent', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -81,7 +81,7 @@ function logout(event) {
     localStorage.removeItem('token'); // ou sessionStorage.removeItem('token') se for o caso
 
     // Redirecionar para a página de login
-    window.location.href = 'paginainicial.html'; // Ou qualquer página de login
+    window.location.href = 'index.html'; // Ou qualquer página de login
 }
 
 async function verificarToken() {
@@ -96,7 +96,7 @@ async function verificarToken() {
 
         try {
             // Enviar os dados para a rota do backend
-            const response = await fetch('http://localhost:30079/api/verificar-token', {
+            const response = await fetch('https://backendong-final.onrender.com/api/verificar-token', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

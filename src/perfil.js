@@ -10,7 +10,7 @@ async function obterPerfil() {
             return;
         }
 
-        const response = await fetch('http://localhost:30079/perfil', {
+        const response = await fetch('https://backendong-final.onrender.com/perfil', {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -81,7 +81,7 @@ async function salvarPerfil() {
         const telefone = document.getElementById('telefone').value;
         const email = document.getElementById('email').value; // Email não será alterado
 
-        const response = await fetch('http://localhost:30079/perfil', {
+        const response = await fetch('https://backendong-final.onrender.com/perfil', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

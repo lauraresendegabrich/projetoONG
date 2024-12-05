@@ -10,7 +10,7 @@ async function obterNome() {
             return;
         }
 
-        const response = await fetch('http://localhost:30079/perfil', {
+        const response = await fetch('https://backendong-final.onrender.com/perfil', {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -72,7 +72,7 @@ async function loadUserEvents() {
     }
 
     try {
-        const response = await fetch(`http://localhost:30079/api/eventos2?userId=${userId}`, {
+        const response = await fetch(`https://backendong-final.onrender.com/api/eventos2?userId=${userId}`, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`, // Token armazenado no localStorage ou outra fonte
@@ -150,7 +150,7 @@ async function loadUserEvents() {
 // Função para excluir um evento
 async function deleteEvent(eventId) {
     try {
-        const response = await fetch(`http://localhost:30079/api/eventos/${eventId}`, {
+        const response = await fetch(`https://backendong-final.onrender.com/api/eventos/${eventId}`, {
             method: "DELETE",
             headers: {
                 "Authorization": `Bearer ${localStorage.getItem("token")}`

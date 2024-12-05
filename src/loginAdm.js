@@ -16,7 +16,7 @@ async function processaFormLoginAdm(event) {
 
 async function loginAdmin(email, password) {
     try {
-        const response = await fetch('http://localhost:30079/adminLogin', {  // URL para o login do admin
+        const response = await fetch('https://backendong-final.onrender.com/adminLogin', {  // URL para o login do admin
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

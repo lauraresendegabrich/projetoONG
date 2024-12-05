@@ -10,7 +10,7 @@ async function obterNome() {
             return;
         }
 
-        const response = await fetch('http://localhost:30079/perfil', {
+        const response = await fetch('https://backendong-final.onrender.com/perfil', {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -133,7 +133,7 @@ async function enviarSolicitacaoEvento() {
         console.log("Dados do evento a serem enviados:", dadosEvento);
 
         // Envia os dados para o servidor
-        const response = await fetch('http://localhost:30079/solicitarEvento', {
+        const response = await fetch('https://backendong-final.onrender.com/solicitarEvento', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

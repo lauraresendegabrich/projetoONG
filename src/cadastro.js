@@ -75,7 +75,7 @@ async function processaFormCadastro(event) {
 
     try {
         // Envia os dados para o servidor
-        const response = await fetch('http://localhost:30079/cadastro', {
+        const response = await fetch('https://backendong-final.onrender.com/cadastro', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
