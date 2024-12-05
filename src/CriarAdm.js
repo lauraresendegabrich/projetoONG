@@ -19,6 +19,14 @@ function verificarToken() {
 document.getElementById('create-form').addEventListener('submit', async function (event) {
     event.preventDefault();
 
+    // Verificar token antes de continuar
+    const token = localStorage.getItem('token');
+    if (!token) {
+        alert('Usuário não autenticado. Redirecionando para a página de login...');
+        window.location.href = 'loginUsuario.html';
+        return;
+    }
+
     document.getElementById('modal-create').style.display = 'flex';
 
     document.getElementById('confirmBtn').onclick = async function () {
