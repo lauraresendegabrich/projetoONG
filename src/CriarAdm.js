@@ -50,7 +50,7 @@ document.getElementById('create-form').addEventListener('submit', async function
 
         try {
             // Enviar os dados para a rota do backend
-            const response = await fetch('https://backendong-final.onrender.com/api/createEvent', {
+            const response = await fetch('https://backendong-final.onrender.com/createData', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
