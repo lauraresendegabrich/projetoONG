@@ -148,14 +148,10 @@ async function loadUserEvents() {
 }
 
 async function deleteEvent(eventId) {
-    const confirmacao = window.confirm("Tem certeza que deseja excluir este evento? Esta ação não poderá ser desfeita.");
 
-    if (!confirmacao) {
-        console.log("Exclusão cancelada pelo usuário.");
-        return;
-    }
 
     try {
+        
         const token = localStorage.getItem("token");
         console.log("Token enviado:", token);
         console.log("ID do evento para exclusão:", eventId);
