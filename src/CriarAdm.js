@@ -3,47 +3,29 @@ const cancelBtn = document.getElementById('cancelBtn');
 const confirmBtn = document.getElementById('confirmBtn');
 const form = document.getElementById('create-form');
 
-// Função para verificar se o token está presente e válido
-async function verificarToken() {
+// Função para verificar se o token está presente no localStorage
+function verificarToken() {
     const token = localStorage.getItem('token');
 
     if (!token) {
         alert('Usuário não autenticado. Redirecionando para a página de login...');
         window.location.href = 'loginUsuario.html';
-        return; // Para evitar que o restante do código seja executado
     } else {
         console.log("Token obtido:", token);
-
-        try {
-            // Enviar os dados para a rota do backend
-            const response = await fetch('https://backendong-final.onrender.com/api/verificar-token', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`
-                }
-            });
-
-            if (!response.ok) {
-                const error = await response.json().catch(() => ({ message: 'Erro desconhecido.' }));
-                console.error("Erro ao verificar token:", error);
-                alert('Sessão inválida ou expirada. Redirecionando para a página de login...');
-                window.location.href = 'loginUsuario.html';
-            } else {
-                console.log("Token válido.");
-                // Outras ações caso o token seja válido
-            }
-        } catch (error) {
-            console.error('Erro ao verificar o token:', error);
-            alert('Erro ao verificar token. Redirecionando para a página de login...');
-            window.location.href = 'loginUsuario.html';
-        }
     }
 }
 
 // Função chamada quando o formulário é submetido
 document.getElementById('create-form').addEventListener('submit', async function (event) {
     event.preventDefault();
+
+    // Verificar token antes de continuar
+    const token = localStorage.getItem('token');
+    if (!token) {
+        alert('Usuário não autenticado. Redirecionando para a página de login...');
+        window.location.href = 'loginUsuario.html';
+        return;
+    }
 
     document.getElementById('modal-create').style.display = 'flex';
 
@@ -75,16 +57,6 @@ document.getElementById('create-form').addEventListener('submit', async function
         };
 
         try {
-            // Obter o token do localStorage
-            const token = localStorage.getItem('token');
-            console.log("Token obtido:", token);
-
-            if (!token) {
-                alert("Usuário não autenticado. Redirecionando para a página de login...");
-                window.location.href = 'loginUsuario.html';
-                return;
-            }
-
             // Enviar os dados para a rota do backend
             const response = await fetch('https://backendong-final.onrender.com/api/createEvent', {
                 method: 'POST',
