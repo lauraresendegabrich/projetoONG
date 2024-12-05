@@ -88,7 +88,7 @@ async function loadUserEvents() {
         // Limpa o conteúdo anterior
         container.innerHTML = '';
 
-       
+
         // Renderiza cada evento no DOM
         events.forEach(event => {
             if (event.ID_Usuario !== userId) return; // Filtrar eventos que pertencem ao usuário
@@ -141,7 +141,7 @@ async function loadUserEvents() {
             container.prepend(card);
         });
 
-        
+
     } catch (error) {
         console.error("Erro ao carregar eventos:", error);
     }
@@ -149,6 +149,15 @@ async function loadUserEvents() {
 
 // Função para excluir um evento
 async function deleteEvent(eventId) {
+
+    // Exibe a mensagem de confirmação
+    const confirmacao = confirm("Tem certeza que deseja excluir este evento? Esta ação não poderá ser desfeita.");
+
+    if (!confirmacao) {
+        console.log("Exclusão cancelada pelo usuário.");
+        return; // Sai da função se o usuário cancelar
+    }
+    
     try {
         const response = await fetch(`https://backendong-final.onrender.com/api/eventos/${eventId}`, {
             method: "DELETE",
