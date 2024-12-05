@@ -23,15 +23,19 @@ async function processaFormCadastro(event) {
         return;
     }
 
-    // Função para validar o formato do telefone
+    // Função para validar o telefone no formato DDD + número (fixo ou celular)
     function validarTelefone(telefone) {
-        const regex = /^\(\d{2}\) \d{5}-\d{4}$/; // Exemplo: (XX) XXXXX-XXXX
-        return regex.test(telefone);
+        // Regex para validar DDD + 8 ou 9 dígitos (exemplo: 21912345678 ou 2123456789)
+        const regexCelular = /^\d{2}9\d{8}$/; // Para celulares (DDD + 9 + 8 dígitos)
+        const regexFixo = /^\d{2}\d{8}$/; // Para fixos (DDD + 8 dígitos)
+
+        // Verifica se é celular ou fixo
+        return regexCelular.test(telefone) || regexFixo.test(telefone);
     }
 
-    // Valida o telefone
+    // Validação do telefone
     if (!validarTelefone(telefone)) {
-        alert("Por favor, insira um telefone válido no formato (XX) XXXXX-XXXX.");
+        alert("Por favor, insira um telefone válido no formato DDD + número (exemplo: 31982345678 para celular ou 3136456789 para fixo).");
         return;
     }
 
@@ -46,6 +50,8 @@ async function processaFormCadastro(event) {
         alert("As senhas não coincidem!");
         return;
     }
+
+
 
     // Função para validar a força da senha
     function validarSenha(senha) {
@@ -100,14 +106,14 @@ async function processaFormCadastro(event) {
         console.error('Erro ao enviar dados de cadastro:', error);
         alert('Erro ao conectar ao servidor. Tente novamente mais tarde.');
     } finally {
-         // Restaura o estado do botão após o processo
-    document.getElementById('button').disabled = false;
-    document.getElementById('button').textContent = 'Cadastrar';
+        // Restaura o estado do botão após o processo
+        document.getElementById('button').disabled = false;
+        document.getElementById('button').textContent = 'Cadastrar';
 
-    // Exibe o ícone de carregamento, caso exista
-    if (document.getElementById('loadingIcon')) {
-        document.getElementById('loadingIcon').style.display = 'none';
-    }
+        // Exibe o ícone de carregamento, caso exista
+        if (document.getElementById('loadingIcon')) {
+            document.getElementById('loadingIcon').style.display = 'none';
+        }
 
     }
 }

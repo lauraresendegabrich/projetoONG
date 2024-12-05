@@ -66,6 +66,18 @@ function habilitarEdicao() {
     document.querySelector('.btn.salvar').style.display = 'inline-block';
 }
 
+// Função para validar o telefone no formato DDD + número (fixo ou celular)
+function validarTelefone(telefone) {
+    // Regex para validar DDD + 8 ou 9 dígitos (exemplo: 21912345678 ou 2123456789)
+    const regexCelular = /^\d{2}9\d{8}$/; // Para celulares (DDD + 9 + 8 dígitos)
+    const regexFixo = /^\d{2}\d{8}$/; // Para fixos (DDD + 8 dígitos)
+
+    // Verifica se é celular ou fixo
+    return regexCelular.test(telefone) || regexFixo.test(telefone);
+}
+
+
+
 // Função para salvar as informações editadas do usuário
 async function salvarPerfil() {
     try {
@@ -80,6 +92,12 @@ async function salvarPerfil() {
         const sobrenome = document.getElementById('sobrenome').value;
         const telefone = document.getElementById('telefone').value;
         const email = document.getElementById('email').value; // Email não será alterado
+
+        // Validação do telefone
+        if (!validarTelefone(telefone)) {
+            alert("Por favor, insira um telefone válido no formato DDD + número (exemplo: 31982345678 para celular ou 3136456789 para fixo).");
+            return;
+        }
 
         const response = await fetch('https://backendong-final.onrender.com/perfil', {
             method: 'PUT',
@@ -117,13 +135,13 @@ async function salvarPerfil() {
 }
 
 // Chama a função ao carregar a página
-window.onload = function() {
+window.onload = function () {
     obterPerfil(); // Certifique-se de que o perfil é carregado ao abrir a página
     document.querySelector('.btn.editar').disabled = false; // Garante que o botão "Editar" esteja habilitado
 };
 
 // Adiciona eventos aos botões "Editar" e "Salvar"
-document.querySelector('.btn.editar').addEventListener('click', function() {
+document.querySelector('.btn.editar').addEventListener('click', function () {
     habilitarEdicao(); // Habilita a edição no primeiro clique
     document.querySelector('.btn.editar').disabled = true; // Desabilita o botão "Editar" após ser clicado
 });
