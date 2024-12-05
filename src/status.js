@@ -147,30 +147,22 @@ async function loadUserEvents() {
     }
 }
 
+// Função para excluir um evento
 async function deleteEvent(eventId) {
-
-
     try {
-        
-        const token = localStorage.getItem("token");
-        console.log("Token enviado:", token);
-        console.log("ID do evento para exclusão:", eventId);
-
-        const response = await fetch(`https://backendong-final.onrender.com/api/eventos/${eventId}`, {
+        const response = await fetch(`http://localhost:30079/api/eventos/${eventId}`, {
             method: "DELETE",
             headers: {
-                "Authorization": `Bearer ${token}`
+                "Authorization": `Bearer ${localStorage.getItem("token")}`
             }
         });
 
-        console.log("Resposta da API:", response);
-        if (response.ok) {
+        if (response.ok) { // Verifica se o status da resposta está entre 200-299
             alert("Evento excluído com sucesso.");
             loadUserEvents(); // Recarrega os eventos após a exclusão
         } else {
-            const errorDetails = await response.json();
-            console.error("Erro ao excluir evento:", errorDetails);
-            alert(`Erro ao excluir evento: ${errorDetails.message || response.statusText}`);
+            const result = await response.json();
+            alert(`Erro ao excluir evento: ${result.message}`);
         }
     } catch (error) {
         console.error("Erro ao excluir evento:", error);
