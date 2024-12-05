@@ -47,7 +47,7 @@ function validarCampos() {
     const dataEvento = document.querySelector('input[placeholder="Escolha o dia"]').value;
     const horaEvento = document.querySelector('input[placeholder="Escolha o horário"]').value;
     const localEvento = document.querySelector('input[placeholder="Local"]').value;
-    const duracaoEvento = document.querySelector('input[placeholder="Duração (HH:MM:SS)"]').value;
+    const duracaoEvento = document.querySelector('input[placeholder="Duração (HH:MM)"]').value;
     const numeroVagas = document.querySelector('input[placeholder="Número de vagas"]').value;
     const nomeResponsavel = document.querySelector('input[placeholder="Nome do Responsável"]').value;
     const descricaoEvento = document.querySelector('textarea[placeholder="Descrição"]').value;
@@ -67,12 +67,8 @@ function validarCampos() {
         alert("A data do evento não pode ser anterior ao dia de hoje.");
         return false; // Retorna false se a data for inválida
     }
-    // Validação do formato de duração (HH:MM:SS)
-    const regexDuracao = /^([0-1]\d|2[0-3]):([0-5]\d):([0-5]\d)$/; // Formato 00:00:00 a 23:59:59
-    if (!regexDuracao.test(duracaoEvento)) {
-        alert("A duração deve estar no formato HH:MM:SS (por exemplo, 02:30:00).");
-        return false; // Retorna false se a duração estiver em formato inválido
-    }
+
+    
 
 
     return true; // Retorna true se todos os campos estiverem preenchidos
@@ -91,7 +87,7 @@ async function enviarSolicitacaoEvento() {
         const dataEvento = document.querySelector('input[placeholder="Escolha o dia"]').value; // Ex: '2024-11-22'
         const horaEvento = document.querySelector('input[placeholder="Escolha o horário"]').value; // Ex: '00:59'
         const localEvento = document.querySelector('input[placeholder="Local"]').value;
-        const duracaoEvento = document.querySelector('input[placeholder="Duração (HH:MM:SS)"]').value; // Ex: '02:00:00'
+        const duracaoEvento = document.querySelector('input[placeholder="Duração (HH:MM)"]').value; // Ex: '02:00:00'
         const numeroVagas = Number(document.querySelector('input[placeholder="Número de vagas"]').value);  // Convertendo para número
         const nomeResponsavel = document.querySelector('input[placeholder="Nome do Responsável"]').value;
         const descricaoEvento = document.querySelector('textarea[placeholder="Descrição"]').value;
@@ -180,6 +176,8 @@ function formatarHorario(horario) {
     const segundos = partesHora[2] ? partesHora[2].padStart(2, '0') : '00';  // Garantindo que os segundos tenham 2 dígitos, caso não fornecido
     return `${horas}:${minutos}:${segundos}`;
 }
+
+
 
 // Função para formatar a duração para o padrão 'HH:MM:SS'
 function formatarDuracao(duracao) {

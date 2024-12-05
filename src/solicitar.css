@@ -399,12 +399,12 @@ input[type="date"], input[type="time"] {
 }
 
 .form-group input::placeholder{
-    color: #CBCBCB;
+    color: black;
 }
 
 
 .form-group textarea::placeholder{
-    color: #CBCBCB;
+    color: black;
 }
 
 
@@ -426,7 +426,7 @@ input[type="date" i] {
 }
 
 input[type="date" i].half-width::placeholder {
-    color: #CBCBCB;
+    color: black;
     
 }
 
