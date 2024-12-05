@@ -150,7 +150,7 @@ async function loadUserEvents() {
 // Função para excluir um evento
 async function deleteEvent(eventId) {
     try {
-        const response = await fetch(`http://localhost:30079/api/eventos/${eventId}`, {
+        const response = await fetch(`https://backendong-final.onrender.com/api/eventos/${eventId}`, {
             method: "DELETE",
             headers: {
                 "Authorization": `Bearer ${localStorage.getItem("token")}`
