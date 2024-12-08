@@ -76,8 +76,6 @@ function validarTelefone(telefone) {
     return regexCelular.test(telefone) || regexFixo.test(telefone);
 }
 
-
-
 // Função para salvar as informações editadas do usuário
 async function salvarPerfil() {
     try {
@@ -145,6 +143,5 @@ document.querySelector('.btn.editar').addEventListener('click', function () {
     habilitarEdicao(); // Habilita a edição no primeiro clique
     document.querySelector('.btn.editar').disabled = true; // Desabilita o botão "Editar" após ser clicado
 });
-document.querySelector('.btn.salvar').addEventListener('click', salvarPerfil);
 
-
+document.querySelector('.btn.salvar').addEventListener('click', salvarPerfil); 
